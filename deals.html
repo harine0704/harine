@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftNest</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="bg-rose-50 font-sans">
+
+<nav class="bg-white shadow-md px-[8%] py-5 flex flex-col lg:flex-row items-center justify-between gap-5">
+
+    <div class="text-3xl font-bold text-pink-500">
+        GiftNest 🎁
+    </div>
+
+    <ul class="flex flex-wrap justify-center gap-8 text-gray-700">
+
+        <!-- Home Dropdown -->
+        <div class="relative group">
+
+          <button type="button"
+            class="flex items-center gap-1 font-medium text-gray-700
+                   hover:text-[#8B5E3C] transition">
+
+            Home
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+              <path stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"/>
+
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 mt-3 w-48 bg-white rounded-xl shadow-lg
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition-all duration-300">
+
+            <a href="home1.html"
+               class="block px-5 py-3 text-sm font-medium text-[#8B5E3C]
+                      hover:bg-[#F8F4EE] rounded-t-xl">
+              Home 1
+            </a>
+
+            <a href="home2.html"
+               class="block px-5 py-3 text-sm text-gray-700
+                      hover:bg-[#F8F4EE] rounded-b-xl">
+              Home 2
+            </a>
+
+          </div>
+        </div>
+        <li>
+            <a href="shop.html" class="hover:text-pink-500 transition">
+                Shop
+            </a>
+        </li>
+
+        <li>
+            <a href="Categories.html" class="hover:text-pink-500 transition">
+                Categories
+            </a>
+        </li>
+
+        <li>
+            <a href="deals.html" class="hover:text-pink-500 transition">
+                Deals
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html" class="hover:text-pink-500 transition">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="hover:text-pink-500 transition">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="flex items-center gap-6">
+
+        <a href="#" class="text-xl hover:text-pink-500">
+            <i class="fas fa-search"></i>
+        </a>
+
+        <a href="#" class="flex items-center gap-2 hover:text-pink-500">
+            <i class="fas fa-shopping-cart"></i>
+            Cart
+        </a>
+
+        <a href="#"
+            class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-full transition">
+
+            Shop Now
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= DEALS HERO ================= -->
+
+<section class="bg-gradient-to-r from-pink-500 to-rose-400 py-24 px-[8%]">
+
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Text -->
+        <div class="text-white">
+
+            <span class="bg-white text-pink-500 px-4 py-2 rounded-full font-semibold">
+                🎉 Festival Mega Sale
+            </span>
+
+            <h1 class="text-5xl font-bold mt-6 leading-tight">
+                Up to <span class="text-yellow-200">50% OFF</span> <br>
+                On All Gift Collections
+            </h1>
+
+            <p class="mt-6 text-pink-100 text-lg leading-7">
+                Surprise your loved ones with premium gifts at unbeatable prices.
+                Limited time offers you don’t want to miss.
+            </p>
+
+            <a href="#"
+                class="inline-block mt-8 bg-white text-pink-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition">
+
+                Shop Deals
+
+            </a>
+
+        </div>
+
+        <!-- Image placeholder -->
+        <div class="bg-white/20 rounded-3xl h-80 flex items-center justify-center text-white/70">
+            Add Deals Image Here
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= SPECIAL OFFERS GRID ================= -->
+
+<section class="py-20 px-[8%] bg-white">
+
+    <div class="max-w-6xl mx-auto text-center mb-14">
+
+        <h2 class="text-3xl font-bold text-gray-800">
+            Hot Deals & Offers 🔥
+        </h2>
+
+        <p class="text-gray-500 mt-3">
+            Grab the best discounts before they expire
+        </p>
+
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Offer 1 -->
+        <div class="bg-rose-50 rounded-3xl p-8 text-center shadow hover:-translate-y-2 transition">
+
+            <div class="text-pink-500 text-4xl font-bold">
+                30% OFF
+            </div>
+
+            <h3 class="text-xl font-bold mt-4 text-gray-800">
+                Festival Special
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+                On all personalized gifts
+            </p>
+
+            <a href="#" class="inline-block mt-6 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600">
+                Grab Deal
+            </a>
+
+        </div>
+
+        <!-- Offer 2 -->
+        <div class="bg-rose-50 rounded-3xl p-8 text-center shadow hover:-translate-y-2 transition">
+
+            <div class="text-pink-500 text-4xl font-bold">
+                BOGO
+            </div>
+
+            <h3 class="text-xl font-bold mt-4 text-gray-800">
+                Buy 1 Get 1
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+                On greeting cards
+            </p>
+
+            <a href="#" class="inline-block mt-6 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600">
+                Grab Deal
+            </a>
+
+        </div>
+
+        <!-- Offer 3 -->
+        <div class="bg-rose-50 rounded-3xl p-8 text-center shadow hover:-translate-y-2 transition">
+
+            <div class="text-pink-500 text-4xl font-bold">
+                ₹999
+            </div>
+
+            <h3 class="text-xl font-bold mt-4 text-gray-800">
+                Combo Pack
+            </h3>
+
+            <p class="text-gray-500 mt-2">
+                Mug + Frame + Card set
+            </p>
+
+            <a href="#" class="inline-block mt-6 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600">
+                Grab Deal
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= COMBO GIFT PACKS ================= -->
+
+<section class="py-20 px-[8%] bg-rose-50">
+
+    <div class="max-w-6xl mx-auto text-center mb-14">
+
+        <h2 class="text-3xl font-bold text-gray-800">
+            Combo Gift Packs 🎁
+        </h2>
+
+        <p class="text-gray-500 mt-3">
+            Specially curated bundles for extra savings and joy
+        </p>
+
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Combo 1 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow hover:-translate-y-2 transition">
+
+            <div class="h-52 bg-gray-100 flex items-center justify-center text-gray-400">
+                Image
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-xl font-bold text-gray-800">
+                    Birthday Celebration Pack
+                </h3>
+
+                <p class="text-gray-500 mt-2">
+                    Mug + Cake Card + LED Frame
+                </p>
+
+                <div class="mt-4 flex justify-between items-center">
+
+                    <span class="text-pink-500 font-bold text-lg">₹1299</span>
+
+                    <span class="text-sm text-gray-400 line-through">₹1799</span>
+
+                </div>
+
+                <button class="w-full mt-5 bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full transition">
+                    Buy Combo
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow hover:-translate-y-2 transition">
+
+            <div class="h-52 bg-gray-100 flex items-center justify-center text-gray-400">
+                Image
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-xl font-bold text-gray-800">
+                    Romantic Love Pack
+                </h3>
+
+                <p class="text-gray-500 mt-2">
+                    Couple Frame + Cushion + Card
+                </p>
+
+                <div class="mt-4 flex justify-between items-center">
+
+                    <span class="text-pink-500 font-bold text-lg">₹1499</span>
+
+                    <span class="text-sm text-gray-400 line-through">₹1999</span>
+
+                </div>
+
+                <button class="w-full mt-5 bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full transition">
+                    Buy Combo
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow hover:-translate-y-2 transition">
+
+            <div class="h-52 bg-gray-100 flex items-center justify-center text-gray-400">
+                Image
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-xl font-bold text-gray-800">
+                    Festival Special Pack
+                </h3>
+
+                <p class="text-gray-500 mt-2">
+                    Chocolates + Card + Decor Kit
+                </p>
+
+                <div class="mt-4 flex justify-between items-center">
+
+                    <span class="text-pink-500 font-bold text-lg">₹999</span>
+
+                    <span class="text-sm text-gray-400 line-through">₹1399</span>
+
+                </div>
+
+                <button class="w-full mt-5 bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full transition">
+                    Buy Combo
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= LIMITED TIME BANNER ================= -->
+
+<section class="py-24 px-[8%] bg-gradient-to-r from-pink-500 to-rose-400 text-white">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+        <h2 class="text-4xl font-bold">
+            Hurry! Limited Time Offers ⏳
+        </h2>
+
+        <p class="mt-4 text-pink-100 text-lg leading-7">
+            These deals won’t last long. Grab your favorite gift combos
+            and save big before the offer ends.
+        </p>
+
+        <!-- Optional "fake countdown style UI" -->
+        <div class="flex justify-center gap-4 mt-8 text-sm">
+
+            <div class="bg-white/20 px-5 py-3 rounded-xl">
+                02 Days
+            </div>
+
+            <div class="bg-white/20 px-5 py-3 rounded-xl">
+                12 Hours
+            </div>
+
+            <div class="bg-white/20 px-5 py-3 rounded-xl">
+                45 Mins
+            </div>
+
+        </div>
+
+        <a href="#"
+            class="inline-block mt-10 bg-white text-pink-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition">
+
+            Shop Deals Now
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= CLEAN PREMIUM FOOTER ================= -->
+
+<footer class="bg-white border-t border-gray-200 pt-20 px-[8%]">
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 pb-12">
+
+        <!-- Brand -->
+        <div>
+
+            <h2 class="text-3xl font-bold text-gray-800">
+                Gift<span class="text-pink-500">Nest</span> 🎁
+            </h2>
+
+            <p class="text-gray-600 mt-4 leading-7">
+                Personalized gifts crafted with love to make every moment unforgettable.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-4 mt-6">
+
+                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Links -->
+        <div>
+
+            <h3 class="text-lg font-bold text-gray-800 mb-5">Quick Links</h3>
+
+            <ul class="space-y-3 text-gray-600">
+
+                <li><a href="#" class="hover:text-pink-500">Home</a></li>
+                <li><a href="#" class="hover:text-pink-500">Shop</a></li>
+                <li><a href="#" class="hover:text-pink-500">Categories</a></li>
+                <li><a href="#" class="hover:text-pink-500">Deals</a></li>
+                <li><a href="#" class="hover:text-pink-500">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Support -->
+        <div>
+
+            <h3 class="text-lg font-bold text-gray-800 mb-5">Support</h3>
+
+            <ul class="space-y-3 text-gray-600">
+
+                <li><a href="#" class="hover:text-pink-500">FAQ</a></li>
+                <li><a href="#" class="hover:text-pink-500">Shipping</a></li>
+                <li><a href="#" class="hover:text-pink-500">Returns</a></li>
+                <li><a href="#" class="hover:text-pink-500">Privacy Policy</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+        <div>
+
+            <h3 class="text-lg font-bold text-gray-800 mb-5">Contact</h3>
+
+            <p class="text-gray-600">📍 Tamil Nadu, India</p>
+            <p class="text-gray-600 mt-2">📞 +91 98765 43210</p>
+            <p class="text-gray-600 mt-2">✉ support@giftnest.com</p>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-200 py-6 mt-10 text-center text-gray-500 text-sm">
+
+        © 2026 GiftNest | Designed with ❤️ for gifting happiness
+
+    </div>
+
+</footer>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftNest</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="bg-rose-50 font-sans">
+
+<nav class="bg-white shadow-md px-[8%] py-5 flex flex-col lg:flex-row items-center justify-between gap-5">
+
+    <div class="text-3xl font-bold text-pink-500">
+        GiftNest 🎁
+    </div>
+
+    <ul class="flex flex-wrap justify-center gap-8 text-gray-700">
+
+        <!-- Home Dropdown -->
+        <div class="relative group">
+
+          <button type="button"
+            class="flex items-center gap-1 font-medium text-gray-700
+                   hover:text-[#8B5E3C] transition">
+
+            Home
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+              <path stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"/>
+
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 mt-3 w-48 bg-white rounded-xl shadow-lg
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition-all duration-300">
+
+            <a href="home1.html"
+               class="block px-5 py-3 text-sm font-medium text-[#8B5E3C]
+                      hover:bg-[#F8F4EE] rounded-t-xl">
+              Home 1
+            </a>
+
+            <a href="home2.html"
+               class="block px-5 py-3 text-sm text-gray-700
+                      hover:bg-[#F8F4EE] rounded-b-xl">
+              Home 2
+            </a>
+
+          </div>
+        </div>
+        <li>
+            <a href="shop.html" class="hover:text-pink-500 transition">
+                Shop
+            </a>
+        </li>
+
+        <li>
+            <a href="Categories.html" class="hover:text-pink-500 transition">
+                Categories
+            </a>
+        </li>
+
+        <li>
+            <a href="deals.html" class="hover:text-pink-500 transition">
+                Deals
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html" class="hover:text-pink-500 transition">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="hover:text-pink-500 transition">
+                contact
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="flex items-center gap-6">
+
+        <a href="#" class="text-xl hover:text-pink-500">
+            <i class="fas fa-search"></i>
+        </a>
+
+        <a href="#" class="flex items-center gap-2 hover:text-pink-500">
+            <i class="fas fa-shopping-cart"></i>
+            Cart
+        </a>
+
+        <a href="#"
+            class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-full transition">
+
+            Shop Now
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="relative w-full">
+
+  <!-- BACKGROUND IMAGE -->
+  <div class="absolute inset-0 -z-10">
+    <img src="your-image-folder/contact-bg.jpg" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+
+  <!-- HERO TEXT -->
+  <div class="max-w-6xl mx-auto px-6 py-20 text-white">
+
+    <p class="text-pink-300 uppercase tracking-widest text-sm">
+      We’re here for you
+    </p>
+
+    <h1 class="text-5xl md:text-6xl font-bold mt-2">
+      Contact Us
+    </h1>
+
+    <p class="max-w-xl mt-4 text-gray-200">
+      Have a question, need help with an order, or want something special?
+      We’d love to hear from you.
+    </p>
+
+    <!-- FEATURE CARDS -->
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+
+      <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+        <div class="text-pink-300 mb-3">
+          📞
+        </div>
+        <h3 class="font-semibold text-lg">24/7 Support</h3>
+        <p class="text-sm text-gray-200">We’re always here to help you</p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+        <div class="text-pink-300 mb-3">
+          ⚡
+        </div>
+        <h3 class="font-semibold text-lg">Quick Response</h3>
+        <p class="text-sm text-gray-200">Replies within minutes</p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+        <div class="text-pink-300 mb-3">
+          🔒
+        </div>
+        <h3 class="font-semibold text-lg">Safe & Secure</h3>
+        <p class="text-sm text-gray-200">Your data is protected</p>
+      </div>
+
+    </div>
+
+    <!-- CONTACT INFO (CLICKABLE + ICONS) -->
+    <div class="bg-white rounded-2xl shadow-lg p-6 grid md:grid-cols-3 gap-6 text-gray-800 mt-12">
+
+      <!-- CALL -->
+      <a href="tel:+919876543210" class="flex items-start gap-4 hover:scale-105 transition">
+
+        <div class="text-pink-500 text-2xl">📞</div>
+
+        <div>
+          <h4 class="font-semibold">Call Us</h4>
+          <p class="text-sm">+91 98765 43210</p>
+          <p class="text-xs text-gray-500">Mon - Sun | 9AM - 9PM</p>
+        </div>
+
+      </a>
+
+      <!-- EMAIL -->
+      <a href="mailto:support@giftnest.com" class="flex items-start gap-4 hover:scale-105 transition">
+
+        <div class="text-pink-500 text-2xl">✉️</div>
+
+        <div>
+          <h4 class="font-semibold">Email Us</h4>
+          <p class="text-sm">support@giftnest.com</p>
+          <p class="text-xs text-gray-500">We reply within minutes</p>
+        </div>
+
+      </a>
+
+      <!-- LOCATION -->
+      <a 
+        href="https://www.google.com/maps"
+        target="_blank"
+        class="flex items-start gap-4 hover:scale-105 transition"
+      >
+
+        <div class="text-pink-500 text-2xl">📍</div>
+
+        <div>
+          <h4 class="font-semibold">Our Location</h4>
+          <p class="text-sm">Chennai, Tamil Nadu</p>
+          <p class="text-xs text-gray-500">India - 600001</p>
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FORM -->
+  <div class="bg-white py-16 px-6">
+
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="text-3xl font-bold text-center mb-10">
+        Send Us a Message
+      </h2>
+
+      <form class="grid md:grid-cols-2 gap-6">
+
+        <input class="p-4 border rounded-xl focus:ring-2 focus:ring-pink-400 outline-none"
+          type="text" placeholder="Your Full Name"
+        />
+
+        <input class="p-4 border rounded-xl focus:ring-2 focus:ring-pink-400 outline-none"
+          type="email" placeholder="Your Email Address"
+        />
+
+        <input class="md:col-span-2 p-4 border rounded-xl focus:ring-2 focus:ring-pink-400 outline-none"
+          type="text" placeholder="Subject"
+        />
+
+        <textarea class="md:col-span-2 p-4 border rounded-xl focus:ring-2 focus:ring-pink-400 outline-none"
+          rows="5" placeholder="Your Message"
+        ></textarea>
+
+        <button class="md:col-span-2 bg-pink-500 hover:bg-pink-600 text-white py-4 rounded-xl font-semibold transition">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftNest</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="bg-rose-50 font-sans">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="bg-white shadow-md px-[8%] py-5 flex flex-col lg:flex-row items-center justify-between gap-5">
+
+    <div class="text-3xl font-bold text-pink-500">
+        GiftNest 🎁
+    </div>
+
+    <ul class="flex flex-wrap justify-center gap-8 text-gray-700">
+
+        <!-- Home Dropdown -->
+        <div class="relative group">
+
+          <button type="button"
+            class="flex items-center gap-1 font-medium text-gray-700
+                   hover:text-[#8B5E3C] transition">
+
+            Home
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+              <path stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"/>
+
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 mt-3 w-48 bg-white rounded-xl shadow-lg
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition-all duration-300">
+
+            <a href="home1.html"
+               class="block px-5 py-3 text-sm font-medium text-[#8B5E3C]
+                      hover:bg-[#F8F4EE] rounded-t-xl">
+              Home 1
+            </a>
+
+            <a href="home2.html"
+               class="block px-5 py-3 text-sm text-gray-700
+                      hover:bg-[#F8F4EE] rounded-b-xl">
+              Home 2
+            </a>
+
+          </div>
+        </div>
+        <li>
+            <a href="shop.html" class="hover:text-pink-500 transition">
+                Shop
+            </a>
+        </li>
+
+        <li>
+            <a href="Categories.html" class="hover:text-pink-500 transition">
+                Categories
+            </a>
+        </li>
+
+        <li>
+            <a href="deals.html" class="hover:text-pink-500 transition">
+                Deals
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html" class="hover:text-pink-500 transition">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="hover:text-pink-500 transition">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="flex items-center gap-6">
+
+        <a href="#" class="text-xl hover:text-pink-500">
+            <i class="fas fa-search"></i>
+        </a>
+
+        <a href="#" class="flex items-center gap-2 hover:text-pink-500">
+            <i class="fas fa-shopping-cart"></i>
+            Cart
+        </a>
+
+        <a href="#"
+            class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-full transition">
+
+            Shop Now
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+<!-- ================= HOME 2 - HERO SECTION ================= -->
+
+<section class="bg-rose-50 py-20 px-[8%]">
+
+    <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
+
+        <!-- Left Content -->
+
+        <div class="w-full lg:w-1/2">
+
+            <span class="inline-block bg-pink-100 text-pink-600 font-semibold px-5 py-2 rounded-full mb-6">
+                🎁 New Arrival Collection
+            </span>
+
+            <h1 class="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6">
+                Create Beautiful Memories
+                <span class="text-pink-500">With Every Gift</span>
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-8 mb-10">
+                Discover premium gift collections thoughtfully designed for birthdays,
+                anniversaries, festivals, and every unforgettable moment. Make every
+                celebration extra special with GiftNest.
+            </p>
+
+            <!-- Buttons -->
+
+            <div class="flex flex-wrap gap-5 mb-12">
+
+                <a href="#"
+                    class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-bold transition duration-300">
+
+                    Browse Gifts
+
+                </a>
+
+                <a href="#"
+                    class="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white px-8 py-4 rounded-full font-bold transition duration-300">
+
+                    Create Your Bundle
+
+                </a>
+
+            </div>
+
+            <!-- Statistics -->
+
+            <div class="grid grid-cols-3 gap-5">
+
+                <div class="bg-white rounded-3xl shadow-lg p-5 text-center">
+
+                    <h2 class="text-3xl font-bold text-pink-500">
+                        500+
+                    </h2>
+
+                    <p class="text-gray-600 mt-2">
+                        Gift Items
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg p-5 text-center">
+
+                    <h2 class="text-3xl font-bold text-pink-500">
+                        12K+
+                    </h2>
+
+                    <p class="text-gray-600 mt-2">
+                        Happy Customers
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg p-5 text-center">
+
+                    <h2 class="text-3xl font-bold text-pink-500">
+                        4.9★
+                    </h2>
+
+                    <p class="text-gray-600 mt-2">
+                        Customer Rating
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="w-full lg:w-1/2 relative flex justify-center">
+
+            <!-- Main Image -->
+
+            <img src="image/pixel18.jpg"
+                alt="Gift Collection"
+                class="w-full max-w-xl rounded-3xl shadow-2xl">
+
+            <!-- Floating Card -->
+
+            <div class="hidden lg:flex absolute top-10 -left-8 bg-white rounded-2xl shadow-lg px-5 py-4 items-center gap-4">
+
+                <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-2xl">
+                    🎀
+                </div>
+
+                <div>
+
+                    <h4 class="font-bold text-gray-800">
+                        Premium Packing
+                    </h4>
+
+                    <p class="text-sm text-gray-500">
+                        Free Gift Wrap
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Floating Card -->
+
+            <div class="hidden lg:flex absolute bottom-10 -right-8 bg-white rounded-2xl shadow-lg px-5 py-4 items-center gap-4">
+
+                <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-2xl">
+                    🚚
+                </div>
+
+                <div>
+
+                    <h4 class="font-bold text-gray-800">
+                        Same Day Delivery
+                    </h4>
+
+                    <p class="text-sm text-gray-500">
+                        Available in Your City
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<!-- ================= TRENDING COLLECTIONS ================= -->
+
+<section class="py-20 px-[8%] bg-white">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-14">
+
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            Trending Collections
+        </h2>
+
+        <p class="text-lg text-gray-600">
+            Explore our handpicked collections for every personality and celebration.
+        </p>
+
+    </div>
+
+    <!-- Collection Cards -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/pixel19.jpg"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Romantic Collection ❤️
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Surprise your loved one with elegant gifts, flowers, chocolates and memorable keepsakes.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Shop Collection
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/pixel20.jpg"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Family Gifts 👨‍👩‍👧
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Thoughtful gift hampers and personalized surprises for your entire family.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Shop Collection
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/pixel21.jpg"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Corporate Gifts 🏢
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Premium business gifts, office hampers and appreciation kits for professionals.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Shop Collection
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/graduation.jpg"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Graduation Gifts 🎓
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Celebrate achievements with memorable graduation gifts and keepsakes.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Shop Collection
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/home-decor.jpg"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Home Décor 🏡
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Beautiful decorative gifts to add charm and elegance to every home.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Shop Collection
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Card 6 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/kids.jpg"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                    Kids Collection 🧸
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Fun toys, cute teddies and exciting gifts specially designed for children.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Shop Collection
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= GIFT BUNDLES ================= -->
+
+<section class="py-20 px-[8%] bg-rose-50">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-14">
+
+        <span class="text-pink-500 font-semibold uppercase tracking-widest">
+            Exclusive Combo Deals
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-4">
+            Gift Bundles
+        </h2>
+
+        <p class="text-lg text-gray-600">
+            Save more with our specially curated gift bundles for every occasion.
+        </p>
+
+    </div>
+
+    <!-- Bundle Cards -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Bundle 1 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/bundle1.jpg"
+                 alt="Birthday Bundle"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <span class="inline-block bg-pink-100 text-pink-500 text-sm font-semibold px-4 py-1 rounded-full mb-3">
+                    Best Seller
+                </span>
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    Birthday Celebration Box
+                </h3>
+
+                <p class="text-gray-600 mb-5">
+                    Cake, greeting card, chocolates, balloons and a surprise gift box.
+                </p>
+
+                <div class="flex justify-between items-center">
+
+                    <span class="text-2xl font-bold text-pink-500">
+                        ₹1,499
+                    </span>
+
+                    <a href="#"
+                       class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 rounded-full font-semibold transition">
+                        Buy Bundle
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bundle 2 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/bundle2.jpg"
+                 alt="Romantic Bundle"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <span class="inline-block bg-red-100 text-red-500 text-sm font-semibold px-4 py-1 rounded-full mb-3">
+                    Popular
+                </span>
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    Chocolate & Flowers
+                </h3>
+
+                <p class="text-gray-600 mb-5">
+                    Premium roses, Ferrero Rocher chocolates and a love greeting card.
+                </p>
+
+                <div class="flex justify-between items-center">
+
+                    <span class="text-2xl font-bold text-pink-500">
+                        ₹1,299
+                    </span>
+
+                    <a href="#"
+                       class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 rounded-full font-semibold transition">
+                        Buy Bundle
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bundle 3 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/bundle3.jpg"
+                 alt="Coffee Bundle"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <span class="inline-block bg-amber-100 text-amber-600 text-sm font-semibold px-4 py-1 rounded-full mb-3">
+                    New
+                </span>
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    Coffee Lover Kit
+                </h3>
+
+                <p class="text-gray-600 mb-5">
+                    Premium mug, coffee pack, cookies and a personalized message card.
+                </p>
+
+                <div class="flex justify-between items-center">
+
+                    <span class="text-2xl font-bold text-pink-500">
+                        ₹999
+                    </span>
+
+                    <a href="#"
+                       class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 rounded-full font-semibold transition">
+                        Buy Bundle
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bundle 4 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/bundle4.jpg"
+                 alt="Family Bundle"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    Family Celebration Pack
+                </h3>
+
+                <p class="text-gray-600 mb-5">
+                    Snacks, sweets, candles, photo frame and greeting cards.
+                </p>
+
+                <div class="flex justify-between items-center">
+
+                    <span class="text-2xl font-bold text-pink-500">
+                        ₹1,799
+                    </span>
+
+                    <a href="#"
+                       class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 rounded-full font-semibold transition">
+                        Buy Bundle
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bundle 5 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/bundle5.jpg"
+                 alt="Self Care"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    Self Care Box
+                </h3>
+
+                <p class="text-gray-600 mb-5">
+                    Scented candles, skincare products and relaxing herbal tea.
+                </p>
+
+                <div class="flex justify-between items-center">
+
+                    <span class="text-2xl font-bold text-pink-500">
+                        ₹1,199
+                    </span>
+
+                    <a href="#"
+                       class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 rounded-full font-semibold transition">
+                        Buy Bundle
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bundle 6 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+            <img src="image/bundle6.jpg"
+                 alt="Corporate Bundle"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    Corporate Gift Hamper
+                </h3>
+
+                <p class="text-gray-600 mb-5">
+                    Diary, pen, coffee mug and premium chocolates for professionals.
+                </p>
+
+                <div class="flex justify-between items-center">
+
+                    <span class="text-2xl font-bold text-pink-500">
+                        ₹2,299
+                    </span>
+
+                    <a href="#"
+                       class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-2 rounded-full font-semibold transition">
+                        Buy Bundle
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= NEW ARRIVALS ================= -->
+
+<section class="py-20 px-[8%] bg-white">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-14">
+
+        <span class="text-pink-500 font-semibold uppercase tracking-widest">
+            Just Launched
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-4">
+            New Arrivals
+        </h2>
+
+        <p class="text-lg text-gray-600">
+            Discover our newest gifts that everyone is talking about.
+        </p>
+
+    </div>
+
+    <!-- Products -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Product 1 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group">
+
+            <div class="relative overflow-hidden">
+
+                <img src="image/new1.jpg"
+                     class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                <span class="absolute top-4 left-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    NEW
+                </span>
+
+                <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    Luxury Gift Hamper
+                </h3>
+
+                <p class="text-pink-500 font-bold text-2xl mb-3">
+                    ₹1,899
+                </p>
+
+                <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full font-semibold transition">
+                    Quick View
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group">
+
+            <div class="relative overflow-hidden">
+
+                <img src="image/new2.jpg"
+                     class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                <span class="absolute top-4 left-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    NEW
+                </span>
+
+                <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    Premium Rose Box
+                </h3>
+
+                <p class="text-pink-500 font-bold text-2xl mb-3">
+                    ₹999
+                </p>
+
+                <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full font-semibold transition">
+                    Quick View
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group">
+
+            <div class="relative overflow-hidden">
+
+                <img src="image/new3.jpg"
+                     class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                <span class="absolute top-4 left-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    NEW
+                </span>
+
+                <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    Personalized Lamp
+                </h3>
+
+                <p class="text-pink-500 font-bold text-2xl mb-3">
+                    ₹1,299
+                </p>
+
+                <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full font-semibold transition">
+                    Quick View
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Product 4 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 group">
+
+            <div class="relative overflow-hidden">
+
+                <img src="image/new4.jpg"
+                     class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                <span class="absolute top-4 left-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    NEW
+                </span>
+
+                <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white shadow flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    Wooden Memory Box
+                </h3>
+
+                <p class="text-pink-500 font-bold text-2xl mb-3">
+                    ₹1,599
+                </p>
+
+                <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full font-semibold transition">
+                    Quick View
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="py-20 px-[8%] bg-rose-50">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-16">
+
+        <span class="text-pink-500 font-semibold uppercase tracking-widest">
+            Simple Process
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-3">
+            How It Works
+        </h2>
+
+        <p class="text-lg text-gray-600 mt-4">
+            Shopping your perfect gift is quick, easy, and hassle-free.
+        </p>
+
+    </div>
+
+    <!-- Steps -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Step 1 -->
+
+        <div class="relative bg-white rounded-3xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <div class="w-20 h-20 mx-auto bg-pink-100 rounded-full flex items-center justify-center text-4xl mb-6">
+                🎁
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Choose a Gift
+            </h3>
+
+            <p class="text-gray-600">
+                Browse hundreds of premium gifts and select your favorite collection.
+            </p>
+
+            <div class="hidden lg:block absolute top-1/2 -right-8 text-4xl text-pink-400">
+                ➜
+            </div>
+
+        </div>
+
+        <!-- Step 2 -->
+
+        <div class="relative bg-white rounded-3xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <div class="w-20 h-20 mx-auto bg-pink-100 rounded-full flex items-center justify-center text-4xl mb-6">
+                ✨
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Personalize
+            </h3>
+
+            <p class="text-gray-600">
+                Add names, photos, custom engraving or beautiful gift wrapping.
+            </p>
+
+            <div class="hidden lg:block absolute top-1/2 -right-8 text-4xl text-pink-400">
+                ➜
+            </div>
+
+        </div>
+
+        <!-- Step 3 -->
+
+        <div class="relative bg-white rounded-3xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <div class="w-20 h-20 mx-auto bg-pink-100 rounded-full flex items-center justify-center text-4xl mb-6">
+                💳
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Place Order
+            </h3>
+
+            <p class="text-gray-600">
+                Securely complete your purchase using your preferred payment method.
+            </p>
+
+            <div class="hidden lg:block absolute top-1/2 -right-8 text-4xl text-pink-400">
+                ➜
+            </div>
+
+        </div>
+
+        <!-- Step 4 -->
+
+        <div class="bg-white rounded-3xl shadow-lg p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <div class="w-20 h-20 mx-auto bg-pink-100 rounded-full flex items-center justify-center text-4xl mb-6">
+                🚚
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Fast Delivery
+            </h3>
+
+            <p class="text-gray-600">
+                Receive your beautifully packed gift safely at your doorstep.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= GIFT FINDER ================= -->
+
+<section class="py-20 px-[8%] bg-white">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-16">
+
+        <span class="text-pink-500 font-semibold uppercase tracking-widest">
+            Find Your Perfect Gift
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-3">
+            Gift Finder
+        </h2>
+
+        <p class="text-lg text-gray-600 mt-4">
+            Not sure what to buy? Let us help you choose the perfect gift in just a few clicks.
+        </p>
+
+    </div>
+
+    <!-- Finder Cards -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+
+        <div class="bg-rose-50 rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <div class="w-24 h-24 mx-auto rounded-full bg-pink-100 flex items-center justify-center text-5xl mb-6">
+                🎂
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                Shop by Occasion
+            </h3>
+
+            <p class="text-gray-600 mb-8">
+                Birthday, Anniversary, Wedding, Festivals, Baby Shower and many more.
+            </p>
+
+            <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-semibold transition">
+                Find Gifts
+            </a>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="bg-rose-50 rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <div class="w-24 h-24 mx-auto rounded-full bg-pink-100 flex items-center justify-center text-5xl mb-6">
+                👨‍👩‍👧
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                Shop by Recipient
+            </h3>
+
+            <p class="text-gray-600 mb-8">
+                Gifts for Parents, Friends, Kids, Couples, Colleagues and Loved Ones.
+            </p>
+
+            <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-semibold transition">
+                Find Gifts
+            </a>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="bg-rose-50 rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <div class="w-24 h-24 mx-auto rounded-full bg-pink-100 flex items-center justify-center text-5xl mb-6">
+                💰
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                Shop by Budget
+            </h3>
+
+            <p class="text-gray-600 mb-8">
+                Amazing gifts under ₹500, ₹1000, ₹2000 and premium luxury collections.
+            </p>
+
+            <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-semibold transition">
+                Find Gifts
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= GIFT CARE TIPS ================= -->
+
+<section class="py-20 px-[8%] bg-rose-50">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-16">
+
+        <span class="text-pink-500 font-semibold uppercase tracking-widest">
+            Gift Guide
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-3">
+            Gift Care Tips & Ideas
+        </h2>
+
+        <p class="text-lg text-gray-600 mt-4">
+            Get inspired with creative gift ideas, wrapping tips, and thoughtful surprises.
+        </p>
+
+    </div>
+
+    <!-- Blog Cards -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <img src="image/tip1.jpg"
+                 alt="Gift Wrapping"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <span class="bg-pink-100 text-pink-600 text-sm px-4 py-1 rounded-full font-semibold">
+                    Gift Wrapping
+                </span>
+
+                <h3 class="text-2xl font-bold text-gray-800 mt-5 mb-3">
+                    5 Creative Ways to Wrap Your Gifts Beautifully
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Learn elegant wrapping techniques that make every gift look extra special before it's even opened.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Read More
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <img src="image/tip2.jpg"
+                 alt="Greeting Cards"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <span class="bg-pink-100 text-pink-600 text-sm px-4 py-1 rounded-full font-semibold">
+                    Greeting Cards
+                </span>
+
+                <h3 class="text-2xl font-bold text-gray-800 mt-5 mb-3">
+                    Choosing the Perfect Greeting Card
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Add a personal touch to your gift with heartfelt greeting cards for every celebration.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Read More
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition">
+
+            <img src="image/tip3.jpg"
+                 alt="Gift Ideas"
+                 class="w-full h-64 object-cover">
+
+            <div class="p-6">
+
+                <span class="bg-pink-100 text-pink-600 text-sm px-4 py-1 rounded-full font-semibold">
+                    Gift Ideas
+                </span>
+
+                <h3 class="text-2xl font-bold text-gray-800 mt-5 mb-3">
+                    Top 10 Personalized Gift Ideas for Loved Ones
+                </h3>
+
+                <p class="text-gray-600 mb-6">
+                    Discover thoughtful personalized gifts that create unforgettable memories for family and friends.
+                </p>
+
+                <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+                    Read More
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= INSTAGRAM GALLERY ================= -->
+
+<!-- ================= INSTAGRAM GALLERY ================= -->
+
+<section class="py-20 px-[8%] bg-white">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-16">
+
+        <span class="text-pink-500 font-semibold uppercase tracking-widest">
+            Follow Us
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-3">
+            @GiftNest Moments
+        </h2>
+
+        <p class="text-lg text-gray-600 mt-4">
+            See how our customers celebrate with beautiful GiftNest surprises.
+        </p>
+
+    </div>
+
+    <!-- Gallery -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Image 1 -->
+
+        <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+
+            <img src="image/insta1.jpg"
+                 class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+
+            <div class="absolute inset-0 bg-pink-500/70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+
+                <i class="fab fa-instagram text-white text-5xl"></i>
+
+            </div>
+
+        </div>
+
+        <!-- Image 2 -->
+
+        <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+
+            <img src="image/insta2.jpg"
+                 class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+
+            <div class="absolute inset-0 bg-pink-500/70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+
+                <i class="fab fa-instagram text-white text-5xl"></i>
+
+            </div>
+
+        </div>
+
+        <!-- Image 3 -->
+
+        <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+
+            <img src="image/insta3.jpg"
+                 class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+
+            <div class="absolute inset-0 bg-pink-500/70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+
+                <i class="fab fa-instagram text-white text-5xl"></i>
+
+            </div>
+
+        </div>
+
+        <!-- Image 4 -->
+
+        <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+
+            <img src="image/insta4.jpg"
+                 class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+
+            <div class="absolute inset-0 bg-pink-500/70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+
+                <i class="fab fa-instagram text-white text-5xl"></i>
+
+            </div>
+
+        </div>
+
+        <!-- Image 5 -->
+
+        <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+
+            <img src="image/insta5.jpg"
+                 class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+
+            <div class="absolute inset-0 bg-pink-500/70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+
+                <i class="fab fa-instagram text-white text-5xl"></i>
+
+            </div>
+
+        </div>
+
+        <!-- Image 6 -->
+
+        <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+
+            <img src="image/insta6.jpg"
+                 class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+
+            <div class="absolute inset-0 bg-pink-500/70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+
+                <i class="fab fa-instagram text-white text-5xl"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Button -->
+
+    <div class="text-center mt-12">
+
+        <a href="#"
+           class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-10 py-4 rounded-full font-bold transition duration-300">
+
+            Follow @GiftNest
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= STORE LOCATIONS ================= -->
+
+<section class="py-20 px-[8%] bg-rose-50">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-16">
+
+        <span class="text-pink-500 font-semibold uppercase tracking-widest">
+            Visit Us
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-3">
+            Our Store Locations
+        </h2>
+
+        <p class="text-lg text-gray-600 mt-4">
+            Visit our stores and experience the joy of choosing the perfect gift in person.
+        </p>
+
+    </div>
+
+    <!-- Store Cards -->
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+        <!-- Store 1 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+            <img src="image/store1.jpg"
+                 alt="Chennai Store"
+                 class="w-full h-72 object-cover">
+
+            <div class="p-8">
+
+                <h3 class="text-3xl font-bold text-gray-800 mb-6">
+                    📍 Chennai Store
+                </h3>
+
+                <div class="space-y-4 text-gray-600 text-lg">
+
+                    <p>
+                        <span class="font-semibold text-gray-800">Address:</span><br>
+                        123 Anna Salai, T. Nagar, Chennai.
+                    </p>
+
+                    <p>
+                        <span class="font-semibold text-gray-800">Open:</span><br>
+                        Mon - Sun : 9:00 AM - 9:00 PM
+                    </p>
+
+                    <p>
+                        <span class="font-semibold text-gray-800">Phone:</span><br>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+                <a href="#"
+                   class="inline-block mt-8 bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-semibold transition">
+
+                    Visit Store
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Store 2 -->
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+            <img src="image/store2.jpg"
+                 alt="Coimbatore Store"
+                 class="w-full h-72 object-cover">
+
+            <div class="p-8">
+
+                <h3 class="text-3xl font-bold text-gray-800 mb-6">
+                    📍 Coimbatore Store
+                </h3>
+
+                <div class="space-y-4 text-gray-600 text-lg">
+
+                    <p>
+                        <span class="font-semibold text-gray-800">Address:</span><br>
+                        45 Avinashi Road, Coimbatore.
+                    </p>
+
+                    <p>
+                        <span class="font-semibold text-gray-800">Open:</span><br>
+                        Mon - Sun : 10:00 AM - 8:30 PM
+                    </p>
+
+                    <p>
+                        <span class="font-semibold text-gray-800">Phone:</span><br>
+                        +91 91234 56789
+                    </p>
+
+                </div>
+
+                <a href="#"
+                   class="inline-block mt-8 bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-semibold transition">
+
+                    Visit Store
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= FAQ SECTION ================= -->
+
+<section class="py-20 px-[8%] bg-white">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-16">
+
+        <span class="text-pink-500 font-semibold uppercase tracking-widest">
+            Frequently Asked Questions
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-3">
+            Have Questions?
+        </h2>
+
+        <p class="text-lg text-gray-600 mt-4">
+            We've answered some of the most common questions from our customers.
+        </p>
+
+    </div>
+
+    <!-- FAQ Cards -->
+
+    <div class="max-w-5xl mx-auto space-y-6">
+
+        <!-- Question 1 -->
+
+        <div class="bg-rose-50 rounded-2xl shadow-lg p-6">
+
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+                🎁 Do you offer gift wrapping?
+            </h3>
+
+            <p class="text-gray-600 leading-7">
+                Yes! Every order can be beautifully gift wrapped with premium wrapping paper,
+                ribbons, and a personalized greeting card.
+            </p>
+
+        </div>
+
+        <!-- Question 2 -->
+
+        <div class="bg-rose-50 rounded-2xl shadow-lg p-6">
+
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+                🚚 How long does delivery take?
+            </h3>
+
+            <p class="text-gray-600 leading-7">
+                Standard delivery takes 2–5 business days. Same-day delivery is available
+                in selected cities for eligible products.
+            </p>
+
+        </div>
+
+        <!-- Question 3 -->
+
+        <div class="bg-rose-50 rounded-2xl shadow-lg p-6">
+
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+                ✨ Can I personalize my gifts?
+            </h3>
+
+            <p class="text-gray-600 leading-7">
+                Absolutely! You can add names, custom messages, photos, engraving,
+                and choose premium gift wrapping options.
+            </p>
+
+        </div>
+
+        <!-- Question 4 -->
+
+        <div class="bg-rose-50 rounded-2xl shadow-lg p-6">
+
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+                💳 Which payment methods do you accept?
+            </h3>
+
+            <p class="text-gray-600 leading-7">
+                We accept UPI, Credit Cards, Debit Cards, Net Banking,
+                Wallets, and Cash on Delivery for selected locations.
+            </p>
+
+        </div>
+
+        <!-- Question 5 -->
+
+        <div class="bg-rose-50 rounded-2xl shadow-lg p-6">
+
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+                📞 How can I contact customer support?
+            </h3>
+
+            <p class="text-gray-600 leading-7">
+                You can reach us via phone, email, or our live chat support.
+                Our team is available every day from 9:00 AM to 9:00 PM.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="py-20 px-[8%] bg-gradient-to-r from-pink-500 to-rose-400">
+
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl p-10 lg:p-16">
+
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+            <!-- Left Content -->
+
+            <div>
+
+                <span class="inline-block bg-pink-100 text-pink-600 px-4 py-2 rounded-full font-semibold mb-5">
+                    📧 Stay Connected
+                </span>
+
+                <h2 class="text-4xl font-bold text-gray-800 mb-5">
+                    Subscribe to Our Newsletter
+                </h2>
+
+                <p class="text-lg text-gray-600 leading-8">
+                    Be the first to know about exclusive offers, new arrivals,
+                    festive discounts, and personalized gift ideas delivered
+                    directly to your inbox.
+                </p>
+
+            </div>
+
+            <!-- Right Form -->
+
+            <div>
+
+                <form class="space-y-5">
+
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        class="w-full border border-gray-300 rounded-full px-6 py-4 outline-none focus:border-pink-500">
+
+                    <input
+                        type="email"
+                        placeholder="Enter Your Email"
+                        class="w-full border border-gray-300 rounded-full px-6 py-4 outline-none focus:border-pink-500">
+
+                    <button
+                        class="w-full bg-pink-500 hover:bg-pink-600 text-white py-4 rounded-full font-bold text-lg transition duration-300">
+
+                        Subscribe Now
+
+                    </button>
+
+                </form>
+
+                <p class="text-gray-500 text-sm mt-5 text-center">
+                    🔒 We respect your privacy. No spam emails.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<!-- ================= CLEAN PREMIUM FOOTER ================= -->
+
+<footer class="bg-white border-t border-gray-200 pt-20 px-[8%]">
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 pb-12">
+
+        <!-- Brand -->
+        <div>
+
+            <h2 class="text-3xl font-bold text-gray-800">
+                Gift<span class="text-pink-500">Nest</span> 🎁
+            </h2>
+
+            <p class="text-gray-600 mt-4 leading-7">
+                Personalized gifts crafted with love to make every moment unforgettable.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-4 mt-6">
+
+                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Links -->
+        <div>
+
+            <h3 class="text-lg font-bold text-gray-800 mb-5">Quick Links</h3>
+
+            <ul class="space-y-3 text-gray-600">
+
+                <li><a href="#" class="hover:text-pink-500">Home</a></li>
+                <li><a href="#" class="hover:text-pink-500">Shop</a></li>
+                <li><a href="#" class="hover:text-pink-500">Categories</a></li>
+                <li><a href="#" class="hover:text-pink-500">Deals</a></li>
+                <li><a href="#" class="hover:text-pink-500">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Support -->
+        <div>
+
+            <h3 class="text-lg font-bold text-gray-800 mb-5">Support</h3>
+
+            <ul class="space-y-3 text-gray-600">
+
+                <li><a href="#" class="hover:text-pink-500">FAQ</a></li>
+                <li><a href="#" class="hover:text-pink-500">Shipping</a></li>
+                <li><a href="#" class="hover:text-pink-500">Returns</a></li>
+                <li><a href="#" class="hover:text-pink-500">Privacy Policy</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+        <div>
+
+            <h3 class="text-lg font-bold text-gray-800 mb-5">Contact</h3>
+
+            <p class="text-gray-600">📍 Tamil Nadu, India</p>
+            <p class="text-gray-600 mt-2">📞 +91 98765 43210</p>
+            <p class="text-gray-600 mt-2">✉ support@giftnest.com</p>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-200 py-6 mt-10 text-center text-gray-500 text-sm">
+
+        © 2026 GiftNest | Designed with ❤️ for gifting happiness
+
+    </div>
+
+</footer>
