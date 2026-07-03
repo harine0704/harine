@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftNest</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <style>
+
+.dark{
+    background:#2b1024;
+    color:white;
+    transition:0.4s;
+}
+
+.dark nav{
+    background:#3d1734 !important;
+}
+
+.dark footer{
+    background:#3d1734 !important;
+}
+
+.dark section{
+    background:#3d1734 !important;
+}
+
+.dark .bg-white{
+    background:#4a1d41 !important;
+}
+
+.dark .bg-rose-50{
+    background:#512248 !important;
+}
+
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-gray-500{
+    color:#ffffff !important;
+}
+
+.dark .border-gray-200{
+    border-color:#ff9bd5 !important;
+}
+
+.dark input,
+.dark textarea{
+    background:#6d2f5f !important;
+    color:white !important;
+    border:1px solid #ff9bd5 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder{
+    color:#ffd8ef;
+}
+
+.dark button{
+    transition:.3s;
+}
+/* RTL MODE */
+
+.rtl-mode{
+    direction: rtl;
+}
+
+.rtl-mode nav,
+.rtl-mode section,
+.rtl-mode footer{
+    direction: rtl;
+}
+
+.rtl-mode .flex{
+    flex-direction: row-reverse;
+}
+
+.rtl-mode input{
+    text-align:right;
+}
+
+.rtl-mode textarea{
+    text-align:right;
+}
+
+</style>
+</head>
+
+<body class="bg-rose-50 font-sans">
+<body class="bg-rose-50 font-sans pt-28">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="flex items-center h-20">
+
+            <!-- Logo -->
+            <a href="#" class="text-3xl font-bold text-pink-500 flex items-center gap-2">
+                GiftNest
+                <i class="fa-solid fa-gift"></i>
+            </a>
+
+            <!-- Mobile Button -->
+            <button id="menu-btn"
+                class="ml-auto lg:hidden w-10 h-10 rounded-lg bg-pink-100 text-pink-500 flex items-center justify-center">
+
+                <i class="fa-solid fa-bars text-xl"></i>
+
+            </button>
+
+            <!-- Menu -->
+            <div id="menu"
+                class="hidden absolute top-20 left-0 w-full bg-white shadow-lg
+                       lg:static lg:flex lg:flex-1 lg:items-center lg:justify-between lg:ml-12
+                       lg:bg-transparent lg:shadow-none">
+
+                <!-- Navigation -->
+                <ul class="flex flex-col lg:flex-row lg:items-center gap-8 p-6 lg:p-0 text-gray-700 font-medium">
+
+                    <!-- Home Dropdown -->
+                    <li class="relative group">
+
+                        <button class="flex items-center gap-2 hover:text-pink-500 transition">
+
+                            Home
+
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+
+                        </button>
+
+                        <div class="hidden group-hover:block lg:absolute bg-white rounded-xl shadow-lg mt-2 min-w-[180px]">
+
+                            <a href="index.html"
+                                class="block px-5 py-3 hover:bg-rose-50 rounded-t-xl">
+
+                                Home 1
+
+                            </a>
+
+                            <a href="home2.html"
+                                class="block px-5 py-3 hover:bg-rose-50 rounded-b-xl">
+
+                                Home 2
+
+                            </a>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <a href="Admin.html" class="hover:text-pink-500 transition">Admin</a>
+                    </li>
+
+                    <li>
+                        <a href="Shop.html" class="hover:text-pink-500 transition">Shop</a>
+                    </li>
+
+                    <li>
+                        <a href="Categories.html" class="hover:text-pink-500 transition">Categories</a>
+                    </li>
+
+                    <li>
+                        <a href="Deals.html" class="hover:text-pink-500 transition">Deals</a>
+                    </li>
+
+                    <li>
+                        <a href="About.html" class="hover:text-pink-500 transition">About</a>
+                    </li>
+
+                    <li>
+                        <a href="Contact.html" class="hover:text-pink-500 transition">Contact</a>
+                    </li>
+
+                </ul>
+
+                <!-- Right Side -->
+                <div class="flex flex-col lg:flex-row lg:items-center gap-5 px-6 pb-6 lg:p-0">
+
+                    <a href="#" class="text-xl hover:text-pink-500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+
+                    <a href="#" class="flex items-center gap-2 hover:text-pink-500">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart
+                    </a>
+
+                    <!-- Dark -->
+                    <button id="theme-toggle"
+                        class="w-11 h-11 rounded-full bg-pink-100 text-pink-500 hover:bg-pink-500 hover:text-white transition">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+                    <!-- RTL -->
+                    <button id="rtl-toggle"
+                        class="w-11 h-11 rounded-full bg-pink-100 text-pink-500 hover:bg-pink-500 hover:text-white transition">
+
+                        <i class="fa-solid fa-right-left"></i>
+
+                    </button>
+
+                    <a href="Shop.html"
+                        class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+
+                        Shop Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ================= YOUR PAGE STARTS HERE ================= -->
+
+<!-- Paste all your remaining Admin page sections below this -->
+
+
+
+<!-- ================= SCRIPT ================= -->
+
+<script>
+
+// ================= DARK MODE =================
+
+const themeBtn = document.getElementById("theme-toggle");
+
+themeBtn.onclick = function () {
+
+    document.body.classList.toggle("dark");
+
+    const icon = this.querySelector("i");
+
+    if(document.body.classList.contains("dark")){
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+    }else{
+
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+
+    }
+
+};
+
+// ================= RTL / LTR =================
+
+const rtlBtn = document.getElementById("rtl-toggle");
+
+rtlBtn.onclick = function () {
+
+    document.body.classList.toggle("rtl-mode");
+
+};
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= ADMIN HERO ================= -->
+
+<section class="relative min-h-screen overflow-hidden">
+
+    <!-- Background Image -->
+    <img src="image/pixel59.png"
+         alt="Admin Banner"
+         class="absolute inset-0 w-full h-full object-cover object-center">
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-pink-900/40 to-black/50"></div>
+
+    <!-- Decorative Blur -->
+    <div class="absolute top-20 left-20 w-44 h-44 bg-pink-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-24 right-20 w-60 h-60 bg-rose-300/20 rounded-full blur-3xl"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 min-h-screen flex items-center">
+
+        <div class="max-w-7xl mx-auto w-full px-[8%]">
+
+            <div class="max-w-2xl">
+
+                <span class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-md border border-white/30 px-6 py-3 rounded-full text-white font-medium">
+
+                    <i class="fa-solid fa-user-shield text-pink-300"></i>
+
+                    GiftNest Administration
+
+                </span>
+
+                <h1 class="text-6xl lg:text-7xl font-bold text-white leading-tight mt-8">
+
+                    Welcome
+
+                    <br>
+
+                    <span class="text-pink-300">
+                        Administrator
+                    </span>
+
+                </h1>
+
+                <p class="mt-8 text-xl leading-9 text-gray-200 max-w-xl">
+
+                    Sign in to securely manage GiftNest products,
+                    orders and customer requests from one place.
+
+                </p>
+
+                <div class="flex flex-wrap gap-6 mt-10">
+
+                    <a href="#login"
+                        class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold transition">
+
+                        Login Now
+
+                    </a>
+
+                    <a href="admin-register.html"
+                        class="border-2 border-white text-white hover:bg-white hover:text-pink-500 px-8 py-4 rounded-full font-semibold transition">
+
+                        Create Account
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Wave -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+
+        <svg class="block w-full h-[130px]"
+             xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 1440 320"
+             preserveAspectRatio="none">
+
+            <path fill="#fff8f8"
+                d="M0,256L80,240C160,224,320,192,480,197.3C640,203,800,245,960,250.7C1120,256,1280,224,1360,202.7L1440,181L1440,320L0,320Z">
+            </path>
+
+        </svg>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= ADMIN LOGIN FORM ================= -->
+
+<section id="login" class="py-24 px-[8%] bg-rose-50">
+
+    <div class="max-w-5xl mx-auto">
+
+        <div class="grid lg:grid-cols-2 bg-white rounded-[40px] shadow-2xl overflow-hidden">
+
+            <!-- Left Side -->
+
+            <div class="bg-gradient-to-br from-pink-500 to-rose-400 p-12 text-white flex flex-col justify-center">
+
+                <h2 class="text-4xl font-bold">
+                    Welcome Back
+                </h2>
+
+                <p class="mt-6 leading-8 text-pink-100">
+
+                    Login to manage GiftNest products, customer details and website information securely.
+
+                </p>
+
+                <div class="space-y-6 mt-10">
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                        </div>
+
+                        <span>100% Secure Login</span>
+
+                    </div>
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+
+                            <i class="fa-solid fa-user-shield"></i>
+
+                        </div>
+
+                        <span>Authorized Admin Access</span>
+
+                    </div>
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
+
+                            <i class="fa-solid fa-shield-heart"></i>
+
+                        </div>
+
+                        <span>Your Data is Protected</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="p-12">
+
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">
+
+                    Admin Login
+
+                </h2>
+
+                <form class="space-y-6">
+
+                    <input type="email"
+                        placeholder="Email Address"
+                        class="w-full border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400">
+
+                    <input type="password"
+                        placeholder="Password"
+                        class="w-full border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-pink-400">
+
+                    <div class="flex justify-between text-sm">
+
+                        <label>
+
+                            <input type="checkbox">
+
+                            Remember Me
+
+                        </label>
+
+                        <a href="#" class="text-pink-500">
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+                    <button class="w-full bg-pink-500 hover:bg-pink-600 text-white py-4 rounded-xl font-semibold transition">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <p class="text-center mt-8 text-gray-600">
+
+                    Don't have an account?
+
+                    <a href="admin-register.html" class="text-pink-500 font-semibold">
+
+                        Register
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= ADMIN RESPONSIBILITIES ================= -->
+
+<section class="py-24 px-[8%] bg-white">
+
+    <div class="text-center mb-16">
+
+        <span class="bg-pink-100 text-pink-600 px-5 py-2 rounded-full font-semibold">
+            Admin Features
+        </span>
+
+        <h2 class="text-4xl font-bold text-gray-800 mt-5">
+            What Can an Admin Do?
+        </h2>
+
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+            The GiftNest administrator manages products, customer information and website content efficiently.
+        </p>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Card 1 -->
+
+        <div class="bg-rose-50 rounded-3xl p-8 text-center shadow-lg hover:-translate-y-2 transition">
+
+            <div class="w-20 h-20 mx-auto rounded-full bg-pink-500 flex items-center justify-center text-white text-3xl">
+
+                <i class="fa-solid fa-box-open"></i>
+
+            </div>
+
+            <h3 class="text-2xl font-bold mt-6 text-gray-800">
+                Products
+            </h3>
+
+            <p class="text-gray-500 mt-3 leading-7">
+                Add, edit and organize gift collections with ease.
+            </p>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="bg-rose-50 rounded-3xl p-8 text-center shadow-lg hover:-translate-y-2 transition">
+
+            <div class="w-20 h-20 mx-auto rounded-full bg-pink-500 flex items-center justify-center text-white text-3xl">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <h3 class="text-2xl font-bold mt-6 text-gray-800">
+                Customers
+            </h3>
+
+            <p class="text-gray-500 mt-3 leading-7">
+                View customer details and provide better support.
+            </p>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="bg-rose-50 rounded-3xl p-8 text-center shadow-lg hover:-translate-y-2 transition">
+
+            <div class="w-20 h-20 mx-auto rounded-full bg-pink-500 flex items-center justify-center text-white text-3xl">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+            </div>
+
+            <h3 class="text-2xl font-bold mt-6 text-gray-800">
+                Orders
+            </h3>
+
+            <p class="text-gray-500 mt-3 leading-7">
+                Monitor customer orders and delivery information.
+            </p>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="bg-rose-50 rounded-3xl p-8 text-center shadow-lg hover:-translate-y-2 transition">
+
+            <div class="w-20 h-20 mx-auto rounded-full bg-pink-500 flex items-center justify-center text-white text-3xl">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+            <h3 class="text-2xl font-bold mt-6 text-gray-800">
+                Reports
+            </h3>
+
+            <p class="text-gray-500 mt-3 leading-7">
+                Review website activities and business performance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ================= NEED HELP SECTION ================= -->
+
+<section class="py-24 px-[8%] bg-gradient-to-r from-pink-500 via-rose-400 to-pink-500">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="bg-white rounded-[40px] shadow-2xl p-10 lg:p-14">
+
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+                <!-- Left -->
+
+                <div>
+
+                    <span class="bg-pink-100 text-pink-600 px-5 py-2 rounded-full font-semibold">
+
+                        Need Assistance?
+
+                    </span>
+
+                    <h2 class="text-4xl font-bold text-gray-800 mt-6 leading-tight">
+
+                        Having Trouble
+                        <br>
+                        Logging In?
+
+                    </h2>
+
+                    <p class="text-gray-500 mt-6 leading-8">
+
+                        If you're experiencing login issues or need help accessing your
+                        administrator account, our support team is here to assist you.
+                        Contact us anytime for quick and secure assistance.
+
+                    </p>
+
+                    <div class="flex flex-wrap gap-5 mt-10">
+
+                        <a href="contact.html"
+                           class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold transition">
+
+                            Contact Support
+
+                        </a>
+
+                        <a href="admin-register.html"
+                           class="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white px-8 py-4 rounded-full font-semibold transition">
+
+                            Create Account
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="grid grid-cols-2 gap-6">
+
+                    <div class="bg-rose-50 rounded-3xl p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full bg-pink-500 flex items-center justify-center text-white text-2xl">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                        </div>
+
+                        <h3 class="font-bold text-xl mt-5">
+
+                            24/7 Support
+
+                        </h3>
+
+                        <p class="text-gray-500 mt-3 text-sm">
+
+                            Friendly assistance whenever you need help.
+
+                        </p>
+
+                    </div>
+
+                    <div class="bg-rose-50 rounded-3xl p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full bg-pink-500 flex items-center justify-center text-white text-2xl">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <h3 class="font-bold text-xl mt-5">
+
+                            Email Help
+
+                        </h3>
+
+                        <p class="text-gray-500 mt-3 text-sm">
+
+                            support@giftnest.com
+
+                        </p>
+
+                    </div>
+
+                    <div class="bg-rose-50 rounded-3xl p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full bg-pink-500 flex items-center justify-center text-white text-2xl">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <h3 class="font-bold text-xl mt-5">
+
+                            Call Us
+
+                        </h3>
+
+                        <p class="text-gray-500 mt-3 text-sm">
+
+                            +91 98765 43210
+
+                        </p>
+
+                    </div>
+
+                    <div class="bg-rose-50 rounded-3xl p-8 text-center">
+
+                        <div class="w-16 h-16 mx-auto rounded-full bg-pink-500 flex items-center justify-center text-white text-2xl">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <h3 class="font-bold text-xl mt-5">
+
+                            Quick Reply
+
+                        </h3>
+
+                        <p class="text-gray-500 mt-3 text-sm">
+
+                            Average response within 30 minutes.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ================= PREMIUM FOOTER ================= -->
+
+<footer class="bg-white border-t border-gray-200 w-full">
+
+    <div class="max-w-7xl mx-auto px-[8%] py-20">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Brand -->
+            <div>
+
+                <h2 class="text-3xl font-bold text-gray-800 flex items-center gap-2">
+                    Gift<span class="text-pink-500">Nest</span>
+                    <i class="fa-solid fa-gift text-pink-500"></i>
+                </h2>
+
+                <p class="text-gray-600 mt-5 leading-8">
+                    Personalized gifts crafted with love to make every celebration memorable and special.
+                </p>
+
+                <div class="flex gap-4 mt-8">
+
+                    <a href="#" class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-6">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-4 text-gray-600">
+
+                    <li><a href="index.html" class="hover:text-pink-500 transition">Home</a></li>
+                    <li><a href="admin.html" class="hover:text-pink-500 transition">Admin</a></li>
+                    <li><a href="shop.html" class="hover:text-pink-500 transition">Shop</a></li>
+                    <li><a href="categories.html" class="hover:text-pink-500 transition">Categories</a></li>
+                    <li><a href="deals.html" class="hover:text-pink-500 transition">Deals</a></li>
+                    <li><a href="about.html" class="hover:text-pink-500 transition">About</a></li>
+                    <li><a href="contact.html" class="hover:text-pink-500 transition">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Support -->
+            <div>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-6">
+                    Support
+                </h3>
+
+                <ul class="space-y-4 text-gray-600">
+
+                    <li><a href="#" class="hover:text-pink-500 transition">FAQ</a></li>
+                    <li><a href="#" class="hover:text-pink-500 transition">Shipping</a></li>
+                    <li><a href="#" class="hover:text-pink-500 transition">Returns</a></li>
+                    <li><a href="#" class="hover:text-pink-500 transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-pink-500 transition">Terms & Conditions</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-6">
+                    Contact Us
+                </h3>
+
+                <div class="space-y-5 text-gray-600">
+
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-pink-500"></i>
+                        Tamil Nadu, India
+                    </p>
+
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-pink-500"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-pink-500"></i>
+                        support@giftnest.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-200 mt-14 pt-6 text-center text-gray-500">
+
+            © 2026 GiftNest |
+            Designed with
+            <i class="fa-solid fa-heart text-pink-500"></i>
+            for gifting happiness.
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+</footer>
