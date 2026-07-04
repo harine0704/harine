@@ -5,16 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiftNest</title>
 
-    <!-- Tailwind -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <style>
 
+.dark{
+    background:#2b1024;
+    color:white;
+    transition:0.4s;
+}
+
+.dark nav{
+    background:#3d1734 !important;
+}
+
+.dark footer{
+    background:#3d1734 !important;
+}
+
+.dark section{
+    background:#3d1734 !important;
+}
+
+.dark .bg-white{
+    background:#4a1d41 !important;
+}
+
+.dark .bg-rose-50{
+    background:#512248 !important;
+}
+
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-gray-500{
+    color:#ffffff !important;
+}
+
+.dark .border-gray-200{
+    border-color:#ff9bd5 !important;
+}
+
+.dark input,
+.dark textarea{
+    background:#6d2f5f !important;
+    color:white !important;
+    border:1px solid #ff9bd5 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder{
+    color:#ffd8ef;
+}
+
+.dark button{
+    transition:.3s;
+}
+/* RTL MODE */
+
+.rtl-mode{
+    direction: rtl;
+}
+
+.rtl-mode nav,
+.rtl-mode section,
+.rtl-mode footer{
+    direction: rtl;
+}
+
+.rtl-mode .flex{
+    flex-direction: row-reverse;
+}
+
+.rtl-mode input{
+    text-align:right;
+}
+
+.rtl-mode textarea{
+    text-align:right;
+}
+
+</style>
 </head>
 
-<body class="bg-rose-50 font-sans pt-24 transition-all duration-300">
+<body class="bg-rose-50 font-sans">
+<body class="bg-rose-50 font-sans pt-28">
 
 <!-- ================= NAVBAR ================= -->
 

@@ -5,28 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiftNest</title>
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <style>
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
 
 .dark{
     background:#2b1024;
     color:white;
-    transition:0.4s;
+    transition:.4s;
 }
 
 .dark nav{
     background:#3d1734 !important;
 }
 
-.dark footer{
-    background:#3d1734 !important;
-}
-
+.dark footer,
 .dark section{
     background:#3d1734 !important;
 }
@@ -43,237 +41,198 @@
 .dark .text-gray-700,
 .dark .text-gray-600,
 .dark .text-gray-500{
-    color:#ffffff !important;
-}
-
-.dark .border-gray-200{
-    border-color:#ff9bd5 !important;
+    color:white !important;
 }
 
 .dark input,
 .dark textarea{
     background:#6d2f5f !important;
-    color:white !important;
-    border:1px solid #ff9bd5 !important;
+    color:white;
 }
-
-.dark input::placeholder,
-.dark textarea::placeholder{
-    color:#ffd8ef;
-}
-
-.dark button{
-    transition:.3s;
-}
-/* RTL MODE */
 
 .rtl-mode{
-    direction: rtl;
+    direction:rtl;
 }
 
-.rtl-mode nav,
-.rtl-mode section,
-.rtl-mode footer{
-    direction: rtl;
-}
-
-.rtl-mode .flex{
-    flex-direction: row-reverse;
-}
-
-.rtl-mode input{
-    text-align:right;
-}
-
+.rtl-mode input,
 .rtl-mode textarea{
     text-align:right;
 }
 
 </style>
+
 </head>
 
-<body class="bg-rose-50 font-sans">
-<body class="bg-rose-50 font-sans pt-28">
+<body class="bg-rose-50 font-sans pt-20">
 
 <!-- ================= NAVBAR ================= -->
 
-<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+<nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="max-w-7xl mx-auto px-6">
 
-        <div class="flex items-center h-20">
+<div class="flex justify-between items-center h-20">
 
-            <!-- Logo -->
-            <a href="#" class="text-3xl font-bold text-pink-500 flex items-center gap-2">
-                GiftNest
-                <i class="fa-solid fa-gift"></i>
-            </a>
+<!-- Logo -->
 
-            <!-- Mobile Button -->
-            <button id="menu-btn"
-                class="ml-auto lg:hidden w-10 h-10 rounded-lg bg-pink-100 text-pink-500 flex items-center justify-center">
+<a href="index.html"
+class="text-3xl font-bold text-pink-500 flex items-center gap-2">
 
-                <i class="fa-solid fa-bars text-xl"></i>
+GiftNest
 
-            </button>
+<i class="fa-solid fa-gift"></i>
 
-            <!-- Menu -->
-            <div id="menu"
-                class="hidden absolute top-20 left-0 w-full bg-white shadow-lg
-                       lg:static lg:flex lg:flex-1 lg:items-center lg:justify-between lg:ml-12
-                       lg:bg-transparent lg:shadow-none">
+</a>
 
-                <!-- Navigation -->
-                <ul class="flex flex-col lg:flex-row lg:items-center gap-8 p-6 lg:p-0 text-gray-700 font-medium">
+<!-- Mobile Button -->
 
-                    <!-- Home Dropdown -->
-                    <li class="relative group">
+<button id="menu-btn"
+class="lg:hidden text-2xl text-pink-500">
 
-                        <button class="flex items-center gap-2 hover:text-pink-500 transition">
+<i class="fa-solid fa-bars"></i>
 
-                            Home
+</button>
 
-                            <i class="fa-solid fa-chevron-down text-xs"></i>
+<!-- Menu -->
 
-                        </button>
+<div id="menu"
+class="hidden lg:flex items-center gap-8">
 
-                        <div class="hidden group-hover:block lg:absolute bg-white rounded-xl shadow-lg mt-2 min-w-[180px]">
+<ul class="flex flex-col lg:flex-row lg:items-center gap-7 text-gray-700 font-medium">
 
-                            <a href="index.html"
-                                class="block px-5 py-3 hover:bg-rose-50 rounded-t-xl">
+<li class="relative group">
 
-                                Home 1
+<button class="flex items-center gap-2 hover:text-pink-500">
 
-                            </a>
+Home
 
-                            <a href="home2.html"
-                                class="block px-5 py-3 hover:bg-rose-50 rounded-b-xl">
+<i class="fa-solid fa-chevron-down text-xs"></i>
 
-                                Home 2
+</button>
 
-                            </a>
+<div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-44">
 
-                        </div>
+<a href="index.html"
+class="block px-4 py-3 hover:bg-rose-50">
 
-                    </li>
+Home 1
 
-                    <li>
-                        <a href="Admin.html" class="hover:text-pink-500 transition">Admin</a>
-                    </li>
+</a>
 
-                    <li>
-                        <a href="Shop.html" class="hover:text-pink-500 transition">Shop</a>
-                    </li>
+<a href="home2.html"
+class="block px-4 py-3 hover:bg-rose-50">
 
-                    <li>
-                        <a href="Categories.html" class="hover:text-pink-500 transition">Categories</a>
-                    </li>
+Home 2
 
-                    <li>
-                        <a href="Deals.html" class="hover:text-pink-500 transition">Deals</a>
-                    </li>
+</a>
 
-                    <li>
-                        <a href="About.html" class="hover:text-pink-500 transition">About</a>
-                    </li>
+</div>
 
-                    <li>
-                        <a href="Contact.html" class="hover:text-pink-500 transition">Contact</a>
-                    </li>
+</li>
 
-                </ul>
+<li><a href="Admin.html" class="hover:text-pink-500">Admin</a></li>
 
-                <!-- Right Side -->
-                <div class="flex flex-col lg:flex-row lg:items-center gap-5 px-6 pb-6 lg:p-0">
+<li><a href="Shop.html" class="hover:text-pink-500">Shop</a></li>
 
-                    <a href="#" class="text-xl hover:text-pink-500">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
+<li><a href="Categories.html" class="hover:text-pink-500">Categories</a></li>
 
-                    <a href="#" class="flex items-center gap-2 hover:text-pink-500">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Cart
-                    </a>
+<li><a href="Deals.html" class="hover:text-pink-500">Deals</a></li>
 
-                    <!-- Dark -->
-                    <button id="theme-toggle"
-                        class="w-11 h-11 rounded-full bg-pink-100 text-pink-500 hover:bg-pink-500 hover:text-white transition">
+<li><a href="About.html" class="hover:text-pink-500">About</a></li>
 
-                        <i class="fa-solid fa-moon"></i>
+<li><a href="Contact.html" class="hover:text-pink-500">Contact</a></li>
 
-                    </button>
+</ul>
 
-                    <!-- RTL -->
-                    <button id="rtl-toggle"
-                        class="w-11 h-11 rounded-full bg-pink-100 text-pink-500 hover:bg-pink-500 hover:text-white transition">
+<div class="flex items-center gap-5 ml-6">
 
-                        <i class="fa-solid fa-right-left"></i>
+<a href="#">
+<i class="fa-solid fa-magnifying-glass text-xl hover:text-pink-500"></i>
+</a>
 
-                    </button>
+<a href="#" class="flex items-center gap-2 hover:text-pink-500">
 
-                    <a href="Shop.html"
-                        class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
+<i class="fa-solid fa-cart-shopping"></i>
 
-                        Shop Now
+Cart
 
-                    </a>
+</a>
 
-                </div>
+<button id="theme-toggle"
+class="w-10 h-10 rounded-full bg-pink-100 text-pink-500">
 
-            </div>
+<i class="fa-solid fa-moon"></i>
 
-        </div>
+</button>
 
-    </div>
+<button id="rtl-toggle"
+class="w-10 h-10 rounded-full bg-pink-100 text-pink-500">
+
+<i class="fa-solid fa-right-left"></i>
+
+</button>
+
+<a href="Shop.html"
+class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">
+
+Shop Now
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </nav>
-<!-- ================= YOUR PAGE STARTS HERE ================= -->
-
-<!-- Paste all your remaining Admin page sections below this -->
-
-
-
-<!-- ================= SCRIPT ================= -->
 
 <script>
 
-// ================= DARK MODE =================
+// Mobile Menu
 
-const themeBtn = document.getElementById("theme-toggle");
+const menuBtn=document.getElementById("menu-btn");
+const menu=document.getElementById("menu");
 
-themeBtn.onclick = function () {
+menuBtn.onclick=function(){
 
-    document.body.classList.toggle("dark");
-
-    const icon = this.querySelector("i");
-
-    if(document.body.classList.contains("dark")){
-
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-
-    }else{
-
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-
-    }
+menu.classList.toggle("hidden");
 
 };
 
-// ================= RTL / LTR =================
+// Dark Mode
 
-const rtlBtn = document.getElementById("rtl-toggle");
+const themeBtn=document.getElementById("theme-toggle");
 
-rtlBtn.onclick = function () {
+themeBtn.onclick=function(){
 
-    document.body.classList.toggle("rtl-mode");
+document.body.classList.toggle("dark");
+
+const icon=this.querySelector("i");
+
+if(document.body.classList.contains("dark")){
+
+icon.classList.replace("fa-moon","fa-sun");
+
+}else{
+
+icon.classList.replace("fa-sun","fa-moon");
+
+}
+
+};
+
+// RTL
+
+document.getElementById("rtl-toggle").onclick=function(){
+
+document.body.classList.toggle("rtl-mode");
 
 };
 
 </script>
-
-</body>
 
 
 
