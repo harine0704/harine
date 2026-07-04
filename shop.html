@@ -5,119 +5,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiftNest</title>
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+.dark{
+    background:#2b1024;
+    color:white;
+    transition:.4s;
+}
+
+.dark nav{
+    background:#3d1734 !important;
+}
+
+.dark footer,
+.dark section{
+    background:#3d1734 !important;
+}
+
+.dark .bg-white{
+    background:#4a1d41 !important;
+}
+
+.dark .bg-rose-50{
+    background:#512248 !important;
+}
+
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-gray-500{
+    color:white !important;
+}
+
+.dark input,
+.dark textarea{
+    background:#6d2f5f !important;
+    color:white;
+}
+
+.rtl-mode{
+    direction:rtl;
+}
+
+.rtl-mode input,
+.rtl-mode textarea{
+    text-align:right;
+}
+
+</style>
+
 </head>
 
-<body class="bg-rose-50 font-sans">
+<body class="bg-rose-50 font-sans pt-20">
 
 <!-- ================= NAVBAR ================= -->
 
-<nav class="bg-white shadow-md px-[8%] py-5 flex flex-col lg:flex-row items-center justify-between gap-5">
+<nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
 
-    <div class="text-3xl font-bold text-pink-500">
-        GiftNest 🎁
-    </div>
+<div class="max-w-7xl mx-auto px-6">
 
-    <ul class="flex flex-wrap justify-center gap-8 text-gray-700">
+<div class="flex justify-between items-center h-20">
 
-        <!-- Home Dropdown -->
-        <div class="relative group">
+<!-- Logo -->
 
-          <button type="button"
-            class="flex items-center gap-1 font-medium text-gray-700
-                   hover:text-[#8B5E3C] transition">
+<a href="index.html"
+class="text-3xl font-bold text-pink-500 flex items-center gap-2">
 
-            Home
+GiftNest
 
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<i class="fa-solid fa-gift"></i>
 
-              <path stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"/>
+</a>
 
-            </svg>
-          </button>
+<!-- Mobile Button -->
 
-          <!-- Dropdown -->
-          <div class="absolute left-0 mt-3 w-48 bg-white rounded-xl shadow-lg
-                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                      transition-all duration-300">
+<button id="menu-btn"
+class="lg:hidden text-2xl text-pink-500">
 
-            <a href="index.html"
-               class="block px-5 py-3 text-sm font-medium text-[#8B5E3C]
-                      hover:bg-[#F8F4EE] rounded-t-xl">
-              Home 1
-            </a>
+<i class="fa-solid fa-bars"></i>
 
-            <a href="home2.html"
-               class="block px-5 py-3 text-sm text-gray-700
-                      hover:bg-[#F8F4EE] rounded-b-xl">
-              Home 2
-            </a>
+</button>
 
-          </div>
-        </div>
-        <li>
-            <a href="shop.html" class="hover:text-pink-500 transition">
-                Shop
-            </a>
-        </li>
+<!-- Menu -->
 
-        <li>
-            <a href="Categories.html" class="hover:text-pink-500 transition">
-                Categories
-            </a>
-        </li>
+<div id="menu"
+class="hidden lg:flex items-center gap-8">
 
-        <li>
-            <a href="deals.html" class="hover:text-pink-500 transition">
-                Deals
-            </a>
-        </li>
+<ul class="flex flex-col lg:flex-row lg:items-center gap-7 text-gray-700 font-medium">
 
-        <li>
-            <a href="about.html" class="hover:text-pink-500 transition">
-                About
-            </a>
-        </li>
+<li class="relative group">
 
-        <li>
-            <a href="contact.html" class="hover:text-pink-500 transition">
-                Contact
-            </a>
-        </li>
+<button class="flex items-center gap-2 hover:text-pink-500">
 
-    </ul>
+Home
 
-    <div class="flex items-center gap-6">
+<i class="fa-solid fa-chevron-down text-xs"></i>
 
-        <a href="#" class="text-xl hover:text-pink-500">
-            <i class="fas fa-search"></i>
-        </a>
+</button>
 
-        <a href="#" class="flex items-center gap-2 hover:text-pink-500">
-            <i class="fas fa-shopping-cart"></i>
-            Cart
-        </a>
+<div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-44">
 
-        <a href="#"
-            class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-full transition">
+<a href="index.html"
+class="block px-4 py-3 hover:bg-rose-50">
 
-            Shop Now
+Home 1
 
-        </a>
+</a>
 
-    </div>
+<a href="home2.html"
+class="block px-4 py-3 hover:bg-rose-50">
+
+Home 2
+
+</a>
+
+</div>
+
+</li>
+
+<li><a href="Admin.html" class="hover:text-pink-500">Admin</a></li>
+
+<li><a href="Shop.html" class="hover:text-pink-500">Shop</a></li>
+
+<li><a href="Categories.html" class="hover:text-pink-500">Categories</a></li>
+
+<li><a href="Deals.html" class="hover:text-pink-500">Deals</a></li>
+
+<li><a href="About.html" class="hover:text-pink-500">About</a></li>
+
+<li><a href="Contact.html" class="hover:text-pink-500">Contact</a></li>
+
+</ul>
+
+<div class="flex items-center gap-5 ml-6">
+
+<a href="#">
+<i class="fa-solid fa-magnifying-glass text-xl hover:text-pink-500"></i>
+</a>
+
+<a href="#" class="flex items-center gap-2 hover:text-pink-500">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Cart
+
+</a>
+
+<button id="theme-toggle"
+class="w-10 h-10 rounded-full bg-pink-100 text-pink-500">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<button id="rtl-toggle"
+class="w-10 h-10 rounded-full bg-pink-100 text-pink-500">
+
+<i class="fa-solid fa-right-left"></i>
+
+</button>
+
+<a href="Shop.html"
+class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">
+
+Shop Now
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </nav>
+
+<script>
+
+// Mobile Menu
+
+const menuBtn=document.getElementById("menu-btn");
+const menu=document.getElementById("menu");
+
+menuBtn.onclick=function(){
+
+menu.classList.toggle("hidden");
+
+};
+
+// Dark Mode
+
+const themeBtn=document.getElementById("theme-toggle");
+
+themeBtn.onclick=function(){
+
+document.body.classList.toggle("dark");
+
+const icon=this.querySelector("i");
+
+if(document.body.classList.contains("dark")){
+
+icon.classList.replace("fa-moon","fa-sun");
+
+}else{
+
+icon.classList.replace("fa-sun","fa-moon");
+
+}
+
+};
+
+// RTL
+
+document.getElementById("rtl-toggle").onclick=function(){
+
+document.body.classList.toggle("rtl-mode");
+
+};
+
+</script>
+
+
+
+
+
 
 
 
@@ -441,218 +561,6 @@
 
 
 
-<!-- ================= ALL PRODUCTS ================= -->
-
-<section class="py-20 px-[8%] bg-white">
-
-    <!-- Heading -->
-    <div class="text-center mb-16">
-
-        <span class="bg-pink-100 text-pink-600 px-4 py-2 rounded-full font-semibold">
-            Our Collection
-        </span>
-
-        <h2 class="text-4xl font-bold text-gray-800 mt-5">
-            All Products
-        </h2>
-
-        <p class="text-gray-600 mt-4 text-lg">
-            Discover handpicked gifts for every special moment.
-        </p>
-
-    </div>
-
-    <!-- Products Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-
-        <!-- Product Card 1 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-
-            <img src="image/p1.jpg" class="w-full h-60 object-cover" alt="Product">
-
-            <div class="p-6">
-
-                <h3 class="text-xl font-bold text-gray-800">Custom Photo Mug</h3>
-
-                <p class="text-pink-500 font-semibold mt-2">₹499</p>
-
-                <div class="flex items-center justify-between mt-4">
-
-                    <span class="text-yellow-500">⭐⭐⭐⭐☆</span>
-
-                    <div class="flex gap-3 text-gray-600">
-
-                        <i class="fa-regular fa-heart hover:text-pink-500 cursor-pointer"></i>
-                        <i class="fa-solid fa-cart-shopping hover:text-pink-500 cursor-pointer"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Product Card 2 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-
-            <img src="image/p2.jpg" class="w-full h-60 object-cover" alt="Product">
-
-            <div class="p-6">
-
-                <h3 class="text-xl font-bold text-gray-800">LED Photo Frame</h3>
-
-                <p class="text-pink-500 font-semibold mt-2">₹999</p>
-
-                <div class="flex items-center justify-between mt-4">
-
-                    <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
-
-                    <div class="flex gap-3 text-gray-600">
-
-                        <i class="fa-regular fa-heart hover:text-pink-500 cursor-pointer"></i>
-                        <i class="fa-solid fa-cart-shopping hover:text-pink-500 cursor-pointer"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Product Card 3 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-
-            <img src="image/p3.jpg" class="w-full h-60 object-cover" alt="Product">
-
-            <div class="p-6">
-
-                <h3 class="text-xl font-bold text-gray-800">Name Pendant</h3>
-
-                <p class="text-pink-500 font-semibold mt-2">₹799</p>
-
-                <div class="flex items-center justify-between mt-4">
-
-                    <span class="text-yellow-500">⭐⭐⭐⭐☆</span>
-
-                    <div class="flex gap-3 text-gray-600">
-
-                        <i class="fa-regular fa-heart hover:text-pink-500 cursor-pointer"></i>
-                        <i class="fa-solid fa-cart-shopping hover:text-pink-500 cursor-pointer"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Product Card 4 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-
-            <img src="image/p4.jpg" class="w-full h-60 object-cover" alt="Product">
-
-            <div class="p-6">
-
-                <h3 class="text-xl font-bold text-gray-800">Love Cushion</h3>
-
-                <p class="text-pink-500 font-semibold mt-2">₹599</p>
-
-                <div class="flex items-center justify-between mt-4">
-
-                    <span class="text-yellow-500">⭐⭐⭐⭐⭐</span>
-
-                    <div class="flex gap-3 text-gray-600">
-
-                        <i class="fa-regular fa-heart hover:text-pink-500 cursor-pointer"></i>
-                        <i class="fa-solid fa-cart-shopping hover:text-pink-500 cursor-pointer"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Product Card 5 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-            <img src="image/p5.jpg" class="w-full h-60 object-cover" alt="Product">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800">Birthday Hamper</h3>
-                <p class="text-pink-500 font-semibold mt-2">₹1299</p>
-            </div>
-        </div>
-
-        <!-- Product Card 6 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-            <img src="image/p6.jpg" class="w-full h-60 object-cover" alt="Product">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800">Greeting Card Set</h3>
-                <p class="text-pink-500 font-semibold mt-2">₹299</p>
-            </div>
-        </div>
-
-        <!-- Product Card 7 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-            <img src="image/p7.jpg" class="w-full h-60 object-cover" alt="Product">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800">Perfume Gift Box</h3>
-                <p class="text-pink-500 font-semibold mt-2">₹1499</p>
-            </div>
-        </div>
-
-        <!-- Product Card 8 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-            <img src="image/p8.jpg" class="w-full h-60 object-cover" alt="Product">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800">Chocolate Box</h3>
-                <p class="text-pink-500 font-semibold mt-2">₹899</p>
-            </div>
-        </div>
-
-        <!-- Product Card 9 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-            <img src="image/p9.jpg" class="w-full h-60 object-cover" alt="Product">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800">Couple Rings</h3>
-                <p class="text-pink-500 font-semibold mt-2">₹1999</p>
-            </div>
-        </div>
-
-        <!-- Product Card 10 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-            <img src="image/p10.jpg" class="w-full h-60 object-cover" alt="Product">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800">Baby Gift Set</h3>
-                <p class="text-pink-500 font-semibold mt-2">₹1099</p>
-            </div>
-        </div>
-
-        <!-- Product Card 11 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-            <img src="image/p11.jpg" class="w-full h-60 object-cover" alt="Product">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800">Wall Frame Art</h3>
-                <p class="text-pink-500 font-semibold mt-2">₹699</p>
-            </div>
-        </div>
-
-        <!-- Product Card 12 -->
-        <div class="bg-rose-50 rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
-            <img src="image/p12.jpg" class="w-full h-60 object-cover" alt="Product">
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-800">Soft Teddy Bear</h3>
-                <p class="text-pink-500 font-semibold mt-2">₹799</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
 
 
 
@@ -689,7 +597,7 @@
         <!-- Card 1 -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:-translate-y-3 transition duration-300">
 
-            <img src="image/custom-mug.jpg"
+            <img src="image/pixel45.jpg"
                 class="w-full h-56 object-cover"
                 alt="Custom Mug">
 
@@ -712,7 +620,7 @@
         <!-- Card 2 -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:-translate-y-3 transition duration-300">
 
-            <img src="image/photo-frame.jpg"
+            <img src="image/pixel46.jpg"
                 class="w-full h-56 object-cover"
                 alt="Photo Frame">
 
@@ -735,7 +643,7 @@
         <!-- Card 3 -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:-translate-y-3 transition duration-300">
 
-            <img src="image/led-lamp.jpg"
+            <img src="image/pixel47.jpg"
                 class="w-full h-56 object-cover"
                 alt="LED Lamp">
 
@@ -758,7 +666,7 @@
         <!-- Card 4 -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:-translate-y-3 transition duration-300">
 
-            <img src="image/custom-cushion.jpg"
+            <img src="image/pixel48.jpg"
                 class="w-full h-56 object-cover"
                 alt="Cushion">
 
@@ -829,7 +737,7 @@
         <!-- Right Image -->
         <div class="flex justify-center">
 
-            <img src="image/festival-sale.png"
+            <img src="image/pixel49.jpg"
                 alt="Festival Sale"
                 class="w-full max-w-md drop-shadow-2xl">
 
@@ -1027,6 +935,7 @@
             <ul class="space-y-3 text-gray-600">
 
                 <li><a href="#" class="hover:text-pink-500">Home</a></li>
+                 <li><a href="#" class="hover:text-pink-500">Admin</a></li>
                 <li><a href="#" class="hover:text-pink-500">Shop</a></li>
                 <li><a href="#" class="hover:text-pink-500">Categories</a></li>
                 <li><a href="#" class="hover:text-pink-500">Deals</a></li>

@@ -5,118 +5,234 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiftNest</title>
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+.dark{
+    background:#2b1024;
+    color:white;
+    transition:.4s;
+}
+
+.dark nav{
+    background:#3d1734 !important;
+}
+
+.dark footer,
+.dark section{
+    background:#3d1734 !important;
+}
+
+.dark .bg-white{
+    background:#4a1d41 !important;
+}
+
+.dark .bg-rose-50{
+    background:#512248 !important;
+}
+
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-gray-500{
+    color:white !important;
+}
+
+.dark input,
+.dark textarea{
+    background:#6d2f5f !important;
+    color:white;
+}
+
+.rtl-mode{
+    direction:rtl;
+}
+
+.rtl-mode input,
+.rtl-mode textarea{
+    text-align:right;
+}
+
+</style>
+
 </head>
 
-<body class="bg-rose-50 font-sans">
+<body class="bg-rose-50 font-sans pt-20">
 
-<nav class="bg-white shadow-md px-[8%] py-5 flex flex-col lg:flex-row items-center justify-between gap-5">
+<!-- ================= NAVBAR ================= -->
 
-    <div class="text-3xl font-bold text-pink-500">
-        GiftNest 🎁
-    </div>
+<nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
 
-    <ul class="flex flex-wrap justify-center gap-8 text-gray-700">
+<div class="max-w-7xl mx-auto px-6">
 
-        <!-- Home Dropdown -->
-        <div class="relative group">
+<div class="flex justify-between items-center h-20">
 
-          <button type="button"
-            class="flex items-center gap-1 font-medium text-gray-700
-                   hover:text-[#8B5E3C] transition">
+<!-- Logo -->
 
-            Home
+<a href="index.html"
+class="text-3xl font-bold text-pink-500 flex items-center gap-2">
 
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+GiftNest
 
-              <path stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"/>
+<i class="fa-solid fa-gift"></i>
 
-            </svg>
-          </button>
+</a>
 
-          <!-- Dropdown -->
-          <div class="absolute left-0 mt-3 w-48 bg-white rounded-xl shadow-lg
-                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                      transition-all duration-300">
+<!-- Mobile Button -->
 
-            <a href="index.html"
-               class="block px-5 py-3 text-sm font-medium text-[#8B5E3C]
-                      hover:bg-[#F8F4EE] rounded-t-xl">
-              Home 1
-            </a>
+<button id="menu-btn"
+class="lg:hidden text-2xl text-pink-500">
 
-            <a href="home2.html"
-               class="block px-5 py-3 text-sm text-gray-700
-                      hover:bg-[#F8F4EE] rounded-b-xl">
-              Home 2
-            </a>
+<i class="fa-solid fa-bars"></i>
 
-          </div>
-        </div>
-        <li>
-            <a href="shop.html" class="hover:text-pink-500 transition">
-                Shop
-            </a>
-        </li>
+</button>
 
-        <li>
-            <a href="Categories.html" class="hover:text-pink-500 transition">
-                Categories
-            </a>
-        </li>
+<!-- Menu -->
 
-        <li>
-            <a href="deals.html" class="hover:text-pink-500 transition">
-                Deals
-            </a>
-        </li>
+<div id="menu"
+class="hidden lg:flex items-center gap-8">
 
-        <li>
-            <a href="about.html" class="hover:text-pink-500 transition">
-                About
-            </a>
-        </li>
+<ul class="flex flex-col lg:flex-row lg:items-center gap-7 text-gray-700 font-medium">
 
-        <li>
-            <a href="contact.html" class="hover:text-pink-500 transition">
-                Contact
-            </a>
-        </li>
+<li class="relative group">
 
-    </ul>
+<button class="flex items-center gap-2 hover:text-pink-500">
 
-    <div class="flex items-center gap-6">
+Home
 
-        <a href="#" class="text-xl hover:text-pink-500">
-            <i class="fas fa-search"></i>
-        </a>
+<i class="fa-solid fa-chevron-down text-xs"></i>
 
-        <a href="#" class="flex items-center gap-2 hover:text-pink-500">
-            <i class="fas fa-shopping-cart"></i>
-            Cart
-        </a>
+</button>
 
-        <a href="#"
-            class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-full transition">
+<div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-44">
 
-            Shop Now
+<a href="index.html"
+class="block px-4 py-3 hover:bg-rose-50">
 
-        </a>
+Home 1
 
-    </div>
+</a>
+
+<a href="home2.html"
+class="block px-4 py-3 hover:bg-rose-50">
+
+Home 2
+
+</a>
+
+</div>
+
+</li>
+
+<li><a href="Admin.html" class="hover:text-pink-500">Admin</a></li>
+
+<li><a href="Shop.html" class="hover:text-pink-500">Shop</a></li>
+
+<li><a href="Categories.html" class="hover:text-pink-500">Categories</a></li>
+
+<li><a href="Deals.html" class="hover:text-pink-500">Deals</a></li>
+
+<li><a href="About.html" class="hover:text-pink-500">About</a></li>
+
+<li><a href="Contact.html" class="hover:text-pink-500">Contact</a></li>
+
+</ul>
+
+<div class="flex items-center gap-5 ml-6">
+
+<a href="#">
+<i class="fa-solid fa-magnifying-glass text-xl hover:text-pink-500"></i>
+</a>
+
+<a href="#" class="flex items-center gap-2 hover:text-pink-500">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Cart
+
+</a>
+
+<button id="theme-toggle"
+class="w-10 h-10 rounded-full bg-pink-100 text-pink-500">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<button id="rtl-toggle"
+class="w-10 h-10 rounded-full bg-pink-100 text-pink-500">
+
+<i class="fa-solid fa-right-left"></i>
+
+</button>
+
+<a href="Shop.html"
+class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">
+
+Shop Now
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </nav>
 
+<script>
+
+// Mobile Menu
+
+const menuBtn=document.getElementById("menu-btn");
+const menu=document.getElementById("menu");
+
+menuBtn.onclick=function(){
+
+menu.classList.toggle("hidden");
+
+};
+
+// Dark Mode
+
+const themeBtn=document.getElementById("theme-toggle");
+
+themeBtn.onclick=function(){
+
+document.body.classList.toggle("dark");
+
+const icon=this.querySelector("i");
+
+if(document.body.classList.contains("dark")){
+
+icon.classList.replace("fa-moon","fa-sun");
+
+}else{
+
+icon.classList.replace("fa-sun","fa-moon");
+
+}
+
+};
+
+// RTL
+
+document.getElementById("rtl-toggle").onclick=function(){
+
+document.body.classList.toggle("rtl-mode");
+
+};
+
+</script>
 
 
 
@@ -165,7 +281,7 @@
 
         <!-- Image placeholder -->
         <div class="bg-white/20 rounded-3xl h-80 flex items-center justify-center text-white/70">
-            Add Deals Image Here
+            <img src="image/pixel51.jpg"
         </div>
 
     </div>
@@ -285,11 +401,11 @@
     <div class="max-w-6xl mx-auto text-center mb-14">
 
         <h2 class="text-3xl font-bold text-gray-800">
-            Combo Gift Packs 🎁
+            Combo Gift Packs
         </h2>
 
         <p class="text-gray-500 mt-3">
-            Specially curated bundles for extra savings and joy
+            Specially curated bundles for extra savings and joy.
         </p>
 
     </div>
@@ -297,11 +413,11 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Combo 1 -->
-        <div class="bg-white rounded-3xl overflow-hidden shadow hover:-translate-y-2 transition">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
-            <div class="h-52 bg-gray-100 flex items-center justify-center text-gray-400">
-                Image
-            </div>
+            <img src="image/pixel52.jpg"
+                 alt="Birthday Celebration Pack"
+                 class="w-full h-56 object-cover">
 
             <div class="p-6">
 
@@ -315,9 +431,13 @@
 
                 <div class="mt-4 flex justify-between items-center">
 
-                    <span class="text-pink-500 font-bold text-lg">₹1299</span>
+                    <span class="text-pink-500 font-bold text-lg">
+                        ₹1299
+                    </span>
 
-                    <span class="text-sm text-gray-400 line-through">₹1799</span>
+                    <span class="text-sm text-gray-400 line-through">
+                        ₹1799
+                    </span>
 
                 </div>
 
@@ -330,11 +450,11 @@
         </div>
 
         <!-- Combo 2 -->
-        <div class="bg-white rounded-3xl overflow-hidden shadow hover:-translate-y-2 transition">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
-            <div class="h-52 bg-gray-100 flex items-center justify-center text-gray-400">
-                Image
-            </div>
+            <img src="image/pixel53.jpg"
+                 alt="Romantic Love Pack"
+                 class="w-full h-56 object-cover">
 
             <div class="p-6">
 
@@ -348,9 +468,13 @@
 
                 <div class="mt-4 flex justify-between items-center">
 
-                    <span class="text-pink-500 font-bold text-lg">₹1499</span>
+                    <span class="text-pink-500 font-bold text-lg">
+                        ₹1499
+                    </span>
 
-                    <span class="text-sm text-gray-400 line-through">₹1999</span>
+                    <span class="text-sm text-gray-400 line-through">
+                        ₹1999
+                    </span>
 
                 </div>
 
@@ -363,11 +487,11 @@
         </div>
 
         <!-- Combo 3 -->
-        <div class="bg-white rounded-3xl overflow-hidden shadow hover:-translate-y-2 transition">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
-            <div class="h-52 bg-gray-100 flex items-center justify-center text-gray-400">
-                Image
-            </div>
+            <img src="image/pixel54.jpg"
+                 alt="Festival Special Pack"
+                 class="w-full h-56 object-cover">
 
             <div class="p-6">
 
@@ -376,14 +500,18 @@
                 </h3>
 
                 <p class="text-gray-500 mt-2">
-                    Chocolates + Card + Decor Kit
+                    Chocolates + Greeting Card + Decor Kit
                 </p>
 
                 <div class="mt-4 flex justify-between items-center">
 
-                    <span class="text-pink-500 font-bold text-lg">₹999</span>
+                    <span class="text-pink-500 font-bold text-lg">
+                        ₹999
+                    </span>
 
-                    <span class="text-sm text-gray-400 line-through">₹1399</span>
+                    <span class="text-sm text-gray-400 line-through">
+                        ₹1399
+                    </span>
 
                 </div>
 
@@ -399,50 +527,41 @@
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-<!-- ================= LIMITED TIME BANNER ================= -->
+<!-- ================= LIMITED TIME OFFER ================= -->
 
 <section class="py-24 px-[8%] bg-gradient-to-r from-pink-500 to-rose-400 text-white">
 
     <div class="max-w-4xl mx-auto text-center">
 
         <h2 class="text-4xl font-bold">
-            Hurry! Limited Time Offers ⏳
+            Hurry! Limited Time Offers
         </h2>
 
         <p class="mt-4 text-pink-100 text-lg leading-7">
-            These deals won’t last long. Grab your favorite gift combos
-            and save big before the offer ends.
+            These deals won't last long. Grab your favorite gift combos and save big before the offer ends.
         </p>
 
-        <!-- Optional "fake countdown style UI" -->
-        <div class="flex justify-center gap-4 mt-8 text-sm">
+        <div class="flex justify-center gap-4 mt-8">
 
-            <div class="bg-white/20 px-5 py-3 rounded-xl">
-                02 Days
+            <div class="bg-white/20 px-6 py-4 rounded-xl">
+                <p class="text-3xl font-bold">02</p>
+                <p class="text-sm">Days</p>
             </div>
 
-            <div class="bg-white/20 px-5 py-3 rounded-xl">
-                12 Hours
+            <div class="bg-white/20 px-6 py-4 rounded-xl">
+                <p class="text-3xl font-bold">12</p>
+                <p class="text-sm">Hours</p>
             </div>
 
-            <div class="bg-white/20 px-5 py-3 rounded-xl">
-                45 Mins
+            <div class="bg-white/20 px-6 py-4 rounded-xl">
+                <p class="text-3xl font-bold">45</p>
+                <p class="text-sm">Minutes</p>
             </div>
 
         </div>
 
         <a href="#"
-            class="inline-block mt-10 bg-white text-pink-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition">
+           class="inline-block mt-10 bg-white text-pink-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition">
 
             Shop Deals Now
 
@@ -451,7 +570,6 @@
     </div>
 
 </section>
-
 
 
 
@@ -516,6 +634,7 @@
             <ul class="space-y-3 text-gray-600">
 
                 <li><a href="#" class="hover:text-pink-500">Home</a></li>
+                 <li><a href="#" class="hover:text-pink-500">Admin</a></li>
                 <li><a href="#" class="hover:text-pink-500">Shop</a></li>
                 <li><a href="#" class="hover:text-pink-500">Categories</a></li>
                 <li><a href="#" class="hover:text-pink-500">Deals</a></li>
