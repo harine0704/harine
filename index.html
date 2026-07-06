@@ -5,321 +5,297 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiftNest</title>
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <style>
-
-.dark{
-    background:#2b1024;
-    color:white;
-    transition:0.4s;
-}
-
-.dark nav{
-    background:#3d1734 !important;
-}
-
-.dark footer{
-    background:#3d1734 !important;
-}
-
-.dark section{
-    background:#3d1734 !important;
-}
-
-.dark .bg-white{
-    background:#4a1d41 !important;
-}
-
-.dark .bg-rose-50{
-    background:#512248 !important;
-}
-
-.dark .text-gray-800,
-.dark .text-gray-700,
-.dark .text-gray-600,
-.dark .text-gray-500{
-    color:#ffffff !important;
-}
-
-.dark .border-gray-200{
-    border-color:#ff9bd5 !important;
-}
-
-.dark input,
-.dark textarea{
-    background:#6d2f5f !important;
-    color:white !important;
-    border:1px solid #ff9bd5 !important;
-}
-
-.dark input::placeholder,
-.dark textarea::placeholder{
-    color:#ffd8ef;
-}
-
-.dark button{
-    transition:.3s;
-}
-/* RTL MODE */
-
-.rtl-mode{
-    direction: rtl;
-}
-
-.rtl-mode nav,
-.rtl-mode section,
-.rtl-mode footer{
-    direction: rtl;
-}
-
-.rtl-mode .flex{
-    flex-direction: row-reverse;
-}
-
-.rtl-mode input{
-    text-align:right;
-}
-
-.rtl-mode textarea{
-    text-align:right;
-}
-
-</style>
+   <!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
+<body>
+<header class="w-full bg-white shadow-sm dark:bg-[#55234D] transition-all duration-300">
 
-<body class="bg-rose-50 font-sans">
-<body class="bg-rose-50 font-sans pt-28">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
 
-<!-- ================= NAVBAR ================= -->
-
-<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-
-        <div class="flex items-center h-20">
+        <nav class="flex items-center justify-between h-20 dark:text-white">
 
             <!-- Logo -->
-            <a href="#" class="text-3xl font-bold text-pink-500 flex items-center gap-2">
-                GiftNest
-                <i class="fa-solid fa-gift"></i>
+            <a href="#" class="flex items-center gap-2">
+                <h1 class="text-3xl lg:text-4xl font-bold text-pink-500 flex items-center gap-2">
+                    GiftNest
+                    <i class="fa-solid fa-gift text-3xl"></i>
+                </h1>
             </a>
 
-            <!-- Mobile Button -->
+            <!-- Desktop Menu -->
+            <ul class="hidden lg:flex items-center gap-8 font-medium text-gray-700 dark:text-white">
+
+                <!-- Home Dropdown -->
+                <li class="relative group">
+
+                    <button class="flex items-center gap-2 hover:text-pink-500 transition">
+                        Home
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+
+                    <div class="absolute left-0 top-full mt-4 w-56 bg-white dark:bg-[#5B2954] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+                        <a href="#" class="block px-6 py-4 hover:bg-pink-50 dark:hover:bg-[#6A3560]">
+                            Home 1
+                        </a>
+
+                        <a href="#" class="block px-6 py-4 hover:bg-pink-50 dark:hover:bg-[#6A3560]">
+                            Home 2
+                        </a>
+
+                    </div>
+
+                </li>
+
+                <li><a href="#" class="hover:text-pink-500">Admin</a></li>
+                <li><a href="#" class="hover:text-pink-500">Shop</a></li>
+                <li><a href="#" class="hover:text-pink-500">Categories</a></li>
+                <li><a href="#" class="hover:text-pink-500">Deals</a></li>
+                <li><a href="#" class="hover:text-pink-500">About</a></li>
+                <li><a href="#" class="hover:text-pink-500">Contact</a></li>
+
+            </ul>
+
+            <!-- Desktop Right -->
+            <div class="hidden lg:flex items-center gap-4">
+
+                <button class="text-xl hover:text-pink-500 dark:text-white">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="flex items-center gap-2 hover:text-pink-500 dark:text-white">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span>Cart</span>
+                </button>
+
+                <button id="desktop-theme-toggle"
+                    class="w-11 h-11 rounded-full bg-pink-100 dark:bg-white flex items-center justify-center hover:scale-110 transition">
+                    <i id="desktop-theme-icon" class="fa-solid fa-moon text-pink-500"></i>
+                </button>
+
+                <button id="desktop-rtl-toggle"
+                    class="w-11 h-11 rounded-full bg-pink-100 dark:bg-white flex items-center justify-center hover:scale-110 transition">
+                    <i class="fa-solid fa-right-left text-pink-500"></i>
+                </button>
+
+                <button
+                    class="bg-pink-500 hover:bg-pink-600 text-white px-7 py-3 rounded-full font-semibold">
+                    Shop Now
+                </button>
+
+            </div>
+
+            <!-- Mobile Menu Button -->
             <button id="menu-btn"
-                class="ml-auto lg:hidden w-10 h-10 rounded-lg bg-pink-100 text-pink-500 flex items-center justify-center">
-
-                <i class="fa-solid fa-bars text-xl"></i>
-
+                class="lg:hidden text-3xl dark:text-white">
+                <i class="fa-solid fa-bars"></i>
             </button>
 
-            <!-- Menu -->
-            <div id="menu"
-                class="hidden absolute top-20 left-0 w-full bg-white shadow-lg
-                       lg:static lg:flex lg:flex-1 lg:items-center lg:justify-between lg:ml-12
-                       lg:bg-transparent lg:shadow-none">
+        </nav>
 
-                <!-- Navigation -->
-                <ul class="flex flex-col lg:flex-row lg:items-center gap-8 p-6 lg:p-0 text-gray-700 font-medium">
+    </div>
 
-                    <!-- Home Dropdown -->
-                    <li class="relative group">
+      <!-- Overlay -->
+    <div id="overlay"
+        class="fixed inset-0 bg-black/60 hidden z-40"></div>
 
-                        <button class="flex items-center gap-2 hover:text-pink-500 transition">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed top-0 right-0 h-screen w-80 max-w-full bg-white dark:bg-[#55234D] shadow-2xl translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
 
-                            Home
+        <!-- Mobile Header -->
+        <div class="flex items-center justify-between px-5 py-5 border-b border-gray-200 dark:border-[#6A3560]">
 
-                            <i class="fa-solid fa-chevron-down text-xs"></i>
+            <!-- Logo -->
+            <h2 class="text-2xl font-bold text-pink-500 flex items-center gap-2">
+                GiftNest
+                <i class="fa-solid fa-gift"></i>
+            </h2>
 
-                        </button>
+            <!-- Right Icons -->
+            <div class="flex items-center gap-4">
 
-                        <div class="hidden group-hover:block lg:absolute bg-white rounded-xl shadow-lg mt-2 min-w-[180px]">
+                <!-- Theme -->
+                <button id="mobile-theme-toggle"
+                    class="w-10 h-10 rounded-full bg-pink-100 dark:bg-white flex items-center justify-center hover:scale-110 transition">
+                    <i id="mobile-theme-icon"
+                        class="fa-solid fa-moon text-pink-500"></i>
+                </button>
 
-                            <a href="index.html"
-                                class="block px-5 py-3 hover:bg-rose-50 rounded-t-xl">
+                <!-- RTL -->
+                <button id="mobile-rtl-toggle"
+                    class="w-10 h-10 rounded-full bg-pink-100 dark:bg-white flex items-center justify-center hover:scale-110 transition">
+                    <i class="fa-solid fa-right-left text-pink-500"></i>
+                </button>
 
-                                Home 1
-
-                            </a>
-
-                            <a href="home2.html"
-                                class="block px-5 py-3 hover:bg-rose-50 rounded-b-xl">
-
-                                Home 2
-
-                            </a>
-
-                        </div>
-
-                    </li>
-
-                    <li>
-                        <a href="Admin.html" class="hover:text-pink-500 transition">Admin</a>
-                    </li>
-
-                    <li>
-                        <a href="Shop.html" class="hover:text-pink-500 transition">Shop</a>
-                    </li>
-
-                    <li>
-                        <a href="Categories.html" class="hover:text-pink-500 transition">Categories</a>
-                    </li>
-
-                    <li>
-                        <a href="Deals.html" class="hover:text-pink-500 transition">Deals</a>
-                    </li>
-
-                    <li>
-                        <a href="About.html" class="hover:text-pink-500 transition">About</a>
-                    </li>
-
-                    <li>
-                        <a href="Contact.html" class="hover:text-pink-500 transition">Contact</a>
-                    </li>
-
-                </ul>
-
-                <!-- Right Side -->
-                <div class="flex flex-col lg:flex-row lg:items-center gap-5 px-6 pb-6 lg:p-0">
-
-                    <a href="#" class="text-xl hover:text-pink-500">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-
-                    <a href="#" class="flex items-center gap-2 hover:text-pink-500">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Cart
-                    </a>
-
-                    <!-- Dark -->
-                    <button id="theme-toggle"
-                        class="w-11 h-11 rounded-full bg-pink-100 text-pink-500 hover:bg-pink-500 hover:text-white transition">
-
-                        <i class="fa-solid fa-moon"></i>
-
-                    </button>
-
-                    <!-- RTL -->
-                    <button id="rtl-toggle"
-                        class="w-11 h-11 rounded-full bg-pink-100 text-pink-500 hover:bg-pink-500 hover:text-white transition">
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                    </button>
-
-                    <a href="Shop.html"
-                        class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition">
-
-                        Shop Now
-
-                    </a>
-
-                </div>
+                <!-- Close -->
+                <button id="close-menu"
+                    class="text-2xl dark:text-white hover:text-pink-500 transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
 
             </div>
 
         </div>
 
+        <!-- Menu Links -->
+        <div class="px-6 py-6 text-gray-700 dark:text-white">
+
+            <details class="group">
+                <summary class="flex justify-between items-center py-4 cursor-pointer list-none font-semibold">
+                    Home
+                    <i class="fa-solid fa-chevron-down text-sm group-open:rotate-180 transition"></i>
+                </summary>
+
+                <div class="pl-4 pb-3">
+                    <a href="#" class="block py-2 hover:text-pink-500">Home 1</a>
+                    <a href="#" class="block py-2 hover:text-pink-500">Home 2</a>
+                </div>
+            </details>
+
+            <a href="#" class="block py-4 hover:text-pink-500">Admin</a>
+            <a href="#" class="block py-4 hover:text-pink-500">Shop</a>
+            <a href="#" class="block py-4 hover:text-pink-500">Categories</a>
+            <a href="#" class="block py-4 hover:text-pink-500">Deals</a>
+            <a href="#" class="block py-4 hover:text-pink-500">About</a>
+            <a href="#" class="block py-4 hover:text-pink-500">Contact</a>
+
+            <hr class="my-5 border-gray-300 dark:border-[#6A3560]">
+
+            <!-- Bottom Icons -->
+            <div class="flex items-center justify-between">
+
+                <button class="text-xl hover:text-pink-500">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="flex items-center gap-2 hover:text-pink-500">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </button>
+
+            </div>
+
+            <button
+                class="w-full mt-6 bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full font-semibold transition">
+                Shop Now
+            </button>
+
+        </div>
+
     </div>
 
-</nav>
+</header>
 
-<!-- ================= YOUR PAGE STARTS HERE ================= -->
+
+
+
 
 <script>
 
-// ================= MOBILE MENU =================
+// ===========================
+// Mobile Menu
+// ===========================
 
-const menuBtn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
-const menuIcon = menuBtn.querySelector("i");
+const menu = document.getElementById("mobile-menu");
+const overlay = document.getElementById("overlay");
 
-menuBtn.addEventListener("click", () => {
-
-    menu.classList.toggle("hidden");
-
-    if (menu.classList.contains("hidden")) {
-
-        menuIcon.classList.remove("fa-xmark");
-        menuIcon.classList.add("fa-bars");
-
-    } else {
-
-        menuIcon.classList.remove("fa-bars");
-        menuIcon.classList.add("fa-xmark");
-
-    }
-
+document.getElementById("menu-btn").addEventListener("click", () => {
+    menu.classList.remove("translate-x-full");
+    overlay.classList.remove("hidden");
 });
 
-// Close menu after clicking any link (mobile)
+function closeMenu() {
+    menu.classList.add("translate-x-full");
+    overlay.classList.add("hidden");
+}
 
-document.querySelectorAll("#menu a").forEach(link => {
+document.getElementById("close-menu").addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu);
 
-    link.addEventListener("click", () => {
+// ===========================
+// Dark Mode
+// ===========================
 
-        if (window.innerWidth < 1024) {
+const desktopThemeBtn = document.getElementById("desktop-theme-toggle");
+const mobileThemeBtn = document.getElementById("mobile-theme-toggle");
 
-            menu.classList.add("hidden");
+const desktopThemeIcon = document.getElementById("desktop-theme-icon");
+const mobileThemeIcon = document.getElementById("mobile-theme-icon");
 
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
+// Restore saved theme
+if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+    document.body.classList.add("bg-[#4B2046]", "text-white");
+    desktopThemeIcon.className = "fa-solid fa-sun text-yellow-400";
+    mobileThemeIcon.className = "fa-solid fa-sun text-yellow-400";
+}
 
-        }
-
-    });
-
-});
-
-
-// ================= DARK MODE =================
-
-const themeBtn = document.getElementById("theme-toggle");
-const themeIcon = themeBtn.querySelector("i");
-
-themeBtn.addEventListener("click", () => {
+function toggleTheme() {
 
     document.documentElement.classList.toggle("dark");
 
-    document.body.classList.toggle("bg-gray-900");
-    document.body.classList.toggle("text-white");
-    document.body.classList.toggle("bg-rose-50");
+    const isDark = document.documentElement.classList.contains("dark");
 
-    document.querySelector("nav").classList.toggle("bg-gray-900");
-    document.querySelector("nav").classList.toggle("text-white");
+    if (isDark) {
 
-    themeIcon.classList.toggle("fa-moon");
-    themeIcon.classList.toggle("fa-sun");
+        document.body.classList.remove("bg-white");
+        document.body.classList.add("bg-[#4B2046]", "text-white");
 
-});
+        desktopThemeIcon.className = "fa-solid fa-sun text-yellow-400";
+        mobileThemeIcon.className = "fa-solid fa-sun text-yellow-400";
 
-
-// ================= RTL =================
-
-const rtlBtn = document.getElementById("rtl-toggle");
-
-rtlBtn.addEventListener("click", () => {
-
-    if (document.documentElement.dir === "rtl") {
-
-        document.documentElement.dir = "ltr";
+        localStorage.setItem("theme", "dark");
 
     } else {
 
-        document.documentElement.dir = "rtl";
+        document.body.classList.remove("bg-[#4B2046]", "text-white");
+        document.body.classList.add("bg-white");
 
+        desktopThemeIcon.className = "fa-solid fa-moon text-pink-500";
+        mobileThemeIcon.className = "fa-solid fa-moon text-pink-500";
+
+        localStorage.setItem("theme", "light");
+    }
+}
+
+desktopThemeBtn.addEventListener("click", toggleTheme);
+mobileThemeBtn.addEventListener("click", toggleTheme);
+
+// ===========================
+// RTL / LTR
+// ===========================
+
+// Restore saved direction
+if (localStorage.getItem("dir") === "rtl") {
+    document.documentElement.setAttribute("dir", "rtl");
+}
+
+function toggleRTL() {
+
+    const currentDir = document.documentElement.getAttribute("dir");
+
+    if (currentDir === "rtl") {
+        document.documentElement.setAttribute("dir", "ltr");
+        localStorage.setItem("dir", "ltr");
+    } else {
+        document.documentElement.setAttribute("dir", "rtl");
+        localStorage.setItem("dir", "rtl");
     }
 
-});
+}
+
+document.getElementById("desktop-rtl-toggle").addEventListener("click", toggleRTL);
+document.getElementById("mobile-rtl-toggle").addEventListener("click", toggleRTL);
 
 </script>
 
-</body>
-</html>
+
 
 
 
@@ -1354,3 +1330,7 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
     </div>
 
 </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
