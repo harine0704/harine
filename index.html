@@ -8,292 +8,284 @@
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-   <!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    transition:background .4s,color .4s;
+}
+
+.dark{
+    background:#2b1024;
+    color:white;
+    transition:.4s;
+}
+
+.dark nav{
+    background:#3d1734 !important;
+}
+
+.dark footer,
+.dark section{
+    background:#3d1734 !important;
+}
+
+.dark .bg-white{
+    background:#4a1d41 !important;
+}
+
+.dark .bg-rose-50{
+    background:#512248 !important;
+}
+
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-gray-500{
+    color:white !important;
+}
+
+.dark input,
+.dark textarea{
+    background:#6d2f5f !important;
+    color:white;
+}
+
+.rtl-mode{
+    direction:rtl;
+}
+
+.rtl-mode input,
+.rtl-mode textarea{
+    text-align:right;
+}
+
+</style>
+
 </head>
-<body>
-<header class="w-full bg-white shadow-sm dark:bg-[#55234D] transition-all duration-300">
 
-    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+<body class="bg-rose-50 font-sans pt-20">
 
-        <nav class="flex items-center justify-between h-20 dark:text-white">
+<!-- ================= NAVBAR ================= -->
 
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-2">
-                <h1 class="text-3xl lg:text-4xl font-bold text-pink-500 flex items-center gap-2">
-                    GiftNest
-                    <i class="fa-solid fa-gift text-3xl"></i>
-                </h1>
-            </a>
+<nav class="fixed top-0 left-0 w-full bg-white/95 shadow-md z-50 backdrop-blur-sm">
 
-            <!-- Desktop Menu -->
-            <ul class="hidden lg:flex items-center gap-8 font-medium text-gray-700 dark:text-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <!-- Home Dropdown -->
-                <li class="relative group">
+<div class="flex justify-between items-center h-20">
 
-                    <button class="flex items-center gap-2 hover:text-pink-500 transition">
-                        Home
-                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
-                    </button>
+<!-- Logo -->
 
-                    <div class="absolute left-0 top-full mt-4 w-56 bg-white dark:bg-[#5B2954] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+<a href="index.html"
+class="text-2xl sm:text-3xl font-bold text-pink-500 flex items-center gap-2">
 
-                        <a href="#" class="block px-6 py-4 hover:bg-pink-50 dark:hover:bg-[#6A3560]">
-                            Home 1
-                        </a>
+GiftNest
 
-                        <a href="#" class="block px-6 py-4 hover:bg-pink-50 dark:hover:bg-[#6A3560]">
-                            Home 2
-                        </a>
+<i class="fa-solid fa-gift"></i>
 
-                    </div>
+</a>
 
-                </li>
+<!-- Desktop Menu -->
 
-                <li><a href="#" class="hover:text-pink-500">Admin</a></li>
-                <li><a href="#" class="hover:text-pink-500">Shop</a></li>
-                <li><a href="#" class="hover:text-pink-500">Categories</a></li>
-                <li><a href="#" class="hover:text-pink-500">Deals</a></li>
-                <li><a href="#" class="hover:text-pink-500">About</a></li>
-                <li><a href="#" class="hover:text-pink-500">Contact</a></li>
+<div class="hidden lg:flex items-center gap-8 flex-1 justify-end">
 
-            </ul>
+<ul class="flex items-center gap-7 text-gray-700 font-medium">
 
-            <!-- Desktop Right -->
-            <div class="hidden lg:flex items-center gap-4">
+<div class="relative group">
 
-                <button class="text-xl hover:text-pink-500 dark:text-white">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+<button type="button"
+class="flex items-center gap-1 font-medium text-gray-700 hover:text-[#8B5E3C] transition">
 
-                <button class="flex items-center gap-2 hover:text-pink-500 dark:text-white">
-                    <i class="fa-solid fa-cart-shopping text-xl"></i>
-                    <span>Cart</span>
-                </button>
+Home
 
-                <button id="desktop-theme-toggle"
-                    class="w-11 h-11 rounded-full bg-pink-100 dark:bg-white flex items-center justify-center hover:scale-110 transition">
-                    <i id="desktop-theme-icon" class="fa-solid fa-moon text-pink-500"></i>
-                </button>
+<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-                <button id="desktop-rtl-toggle"
-                    class="w-11 h-11 rounded-full bg-pink-100 dark:bg-white flex items-center justify-center hover:scale-110 transition">
-                    <i class="fa-solid fa-right-left text-pink-500"></i>
-                </button>
+<path stroke-linecap="round"stroke-linejoin="round"stroke-width="2" d="M19 9l-7 7-7-7"/>
 
-                <button
-                    class="bg-pink-500 hover:bg-pink-600 text-white px-7 py-3 rounded-full font-semibold">
-                    Shop Now
-                </button>
+</svg>
+</button>
 
-            </div>
+<div class="absolute left-0 mt-3 w-48 bg-white rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
 
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn"
-                class="lg:hidden text-3xl dark:text-white">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+<a href="../index.html" class="block px-5 py-3 text-sm font-medium text-gray-700 hover:bg-[#F8F4EE] hover:text-[#8B5E3C] rounded-t-xl">
+Home 1
+</a>
+<a href="../home2.html" class="block px-5 py-3 text-sm text-gray-700 hover:bg-[#F8F4EE] hover:text-[#8B5E3C] rounded-b-xl">
+Home 2
+</a>
 
-        </nav>
+</div>
+</div>
 
-    </div>
+<li><a href="Admin.html" class="hover:text-pink-500">Admin</a></li>
+<li><a href="Shop.html" class="hover:text-pink-500">Shop</a></li>
+<li><a href="Categories.html" class="hover:text-pink-500">Categories</a></li>
+<li><a href="Deals.html" class="hover:text-pink-500">Deals</a></li>
+<li><a href="About.html" class="hover:text-pink-500">About</a></li>
+<li><a href="Contact.html" class="hover:text-pink-500">Contact</a></li>
 
-      <!-- Overlay -->
-    <div id="overlay"
-        class="fixed inset-0 bg-black/60 hidden z-40"></div>
+</ul>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu"
-        class="fixed top-0 right-0 h-screen w-80 max-w-full bg-white dark:bg-[#55234D] shadow-2xl translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+<div class="flex items-center gap-5 ml-6">
 
-        <!-- Mobile Header -->
-        <div class="flex items-center justify-between px-5 py-5 border-b border-gray-200 dark:border-[#6A3560]">
+<a href="#">
+<i class="fa-solid fa-magnifying-glass text-xl hover:text-pink-500"></i>
+</a>
 
-            <!-- Logo -->
-            <h2 class="text-2xl font-bold text-pink-500 flex items-center gap-2">
-                GiftNest
-                <i class="fa-solid fa-gift"></i>
-            </h2>
+<a href="#" class="flex items-center gap-2 hover:text-pink-500">
+<i class="fa-solid fa-cart-shopping"></i>
+Cart
+</a>
 
-            <!-- Right Icons -->
-            <div class="flex items-center gap-4">
+<button id="theme-toggle" class="w-10 h-10 rounded-full bg-pink-100 text-pink-500 transition hover:bg-pink-200" aria-label="Toggle dark mode">
+<i class="fa-solid fa-moon"></i>
+</button>
 
-                <!-- Theme -->
-                <button id="mobile-theme-toggle"
-                    class="w-10 h-10 rounded-full bg-pink-100 dark:bg-white flex items-center justify-center hover:scale-110 transition">
-                    <i id="mobile-theme-icon"
-                        class="fa-solid fa-moon text-pink-500"></i>
-                </button>
+<button id="rtl-toggle" class="w-10 h-10 rounded-full bg-pink-100 text-pink-500 transition hover:bg-pink-200" aria-label="Toggle RTL mode">
+<i class="fa-solid fa-right-left"></i>
+</button>
 
-                <!-- RTL -->
-                <button id="mobile-rtl-toggle"
-                    class="w-10 h-10 rounded-full bg-pink-100 dark:bg-white flex items-center justify-center hover:scale-110 transition">
-                    <i class="fa-solid fa-right-left text-pink-500"></i>
-                </button>
+<a href="Shop.html" class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 transition">
+Shop Now
+</a>
 
-                <!-- Close -->
-                <button id="close-menu"
-                    class="text-2xl dark:text-white hover:text-pink-500 transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
+</div>
 
-            </div>
+</div>
 
-        </div>
+<!-- Mobile Actions -->
 
-        <!-- Menu Links -->
-        <div class="px-6 py-6 text-gray-700 dark:text-white">
+<div class="flex items-center justify-end gap-2 lg:hidden min-w-[112px]">
 
-            <details class="group">
-                <summary class="flex justify-between items-center py-4 cursor-pointer list-none font-semibold">
-                    Home
-                    <i class="fa-solid fa-chevron-down text-sm group-open:rotate-180 transition"></i>
-                </summary>
+<button id="theme-toggle-mobile" class="w-11 h-11 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center shadow-sm transition hover:bg-pink-200 border border-pink-200" aria-label="Toggle dark mode">
+<i class="fa-solid fa-moon"></i>
+</button>
 
-                <div class="pl-4 pb-3">
-                    <a href="#" class="block py-2 hover:text-pink-500">Home 1</a>
-                    <a href="#" class="block py-2 hover:text-pink-500">Home 2</a>
-                </div>
-            </details>
+<button id="rtl-toggle-mobile" class="w-11 h-11 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center shadow-sm transition hover:bg-pink-200 border border-pink-200" aria-label="Toggle RTL mode">
+<i class="fa-solid fa-right-left"></i>
+</button>
 
-            <a href="#" class="block py-4 hover:text-pink-500">Admin</a>
-            <a href="#" class="block py-4 hover:text-pink-500">Shop</a>
-            <a href="#" class="block py-4 hover:text-pink-500">Categories</a>
-            <a href="#" class="block py-4 hover:text-pink-500">Deals</a>
-            <a href="#" class="block py-4 hover:text-pink-500">About</a>
-            <a href="#" class="block py-4 hover:text-pink-500">Contact</a>
+<button id="menu-btn" class="w-11 h-11 rounded-full border border-pink-200 bg-pink-50 text-pink-500 flex items-center justify-center shadow-sm transition-all duration-200" aria-label="Toggle menu" aria-expanded="false">
+<i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+</button>
 
-            <hr class="my-5 border-gray-300 dark:border-[#6A3560]">
+</div>
 
-            <!-- Bottom Icons -->
-            <div class="flex items-center justify-between">
+</div>
 
-                <button class="text-xl hover:text-pink-500">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+<div id="menu" class="lg:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out">
+<div class="border-t border-pink-100 py-4 space-y-3">
+<div class="rounded-2xl border border-pink-100 bg-white/80 p-3 shadow-sm">
+<div class="flex items-center gap-2 rounded-full border border-pink-200 bg-rose-50 px-3 py-2">
+<i class="fa-solid fa-magnifying-glass text-pink-500"></i>
+<input type="text" placeholder="Search gifts..." class="w-full bg-transparent outline-none text-sm text-gray-700">
+</div>
+</div>
+<div class="flex items-center justify-between rounded-2xl border border-pink-200 bg-pink-50 px-4 py-3">
+<a href="Shop.html" class="flex items-center gap-2 text-sm font-semibold text-pink-600">
+<i class="fa-solid fa-bag-shopping"></i>
+Cart (2)
+</a>
+<a href="Shop.html" class="rounded-full bg-pink-500 px-3 py-1.5 text-sm font-medium text-white">Shop Now</a>
+</div>
+<ul class="flex flex-col gap-2 text-gray-700 font-medium">
+<li><a href="Admin.html" class="block rounded-xl px-4 py-3 hover:bg-pink-50 hover:text-pink-500">Admin</a></li>
+<li><a href="Shop.html" class="block rounded-xl px-4 py-3 hover:bg-pink-50 hover:text-pink-500">Shop</a></li>
+<li><a href="Categories.html" class="block rounded-xl px-4 py-3 hover:bg-pink-50 hover:text-pink-500">Categories</a></li>
+<li><a href="Deals.html" class="block rounded-xl px-4 py-3 hover:bg-pink-50 hover:text-pink-500">Deals</a></li>
+<li><a href="About.html" class="block rounded-xl px-4 py-3 hover:bg-pink-50 hover:text-pink-500">About</a></li>
+<li><a href="Contact.html" class="block rounded-xl px-4 py-3 hover:bg-pink-50 hover:text-pink-500">Contact</a></li>
+</ul>
+</div>
+</div>
 
-                <button class="flex items-center gap-2 hover:text-pink-500">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span>Cart</span>
-                </button>
+</div>
 
-            </div>
-
-            <button
-                class="w-full mt-6 bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full font-semibold transition">
-                Shop Now
-            </button>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-
-
+</nav>
 
 <script>
 
-// ===========================
-// Mobile Menu
-// ===========================
+const menuBtn=document.getElementById("menu-btn");
+const menu=document.getElementById("menu");
+const menuIcon=document.getElementById("menu-icon");
 
-const menu = document.getElementById("mobile-menu");
-const overlay = document.getElementById("overlay");
+const toggleMenu=()=>{
+  const isOpen=menuBtn.getAttribute("aria-expanded") === "true";
 
-document.getElementById("menu-btn").addEventListener("click", () => {
-    menu.classList.remove("translate-x-full");
-    overlay.classList.remove("hidden");
+  if(isOpen){
+    menu.classList.add("max-h-0","opacity-0");
+    menu.classList.remove("max-h-96","opacity-100");
+    menuBtn.setAttribute("aria-expanded","false");
+    menuIcon.classList.replace("fa-xmark","fa-bars");
+  }else{
+    menu.classList.remove("max-h-0","opacity-0");
+    menu.classList.add("max-h-96","opacity-100");
+    menuBtn.setAttribute("aria-expanded","true");
+    menuIcon.classList.replace("fa-bars","fa-xmark");
+  }
+};
+
+menuBtn.onclick=function(){
+  toggleMenu();
+};
+
+window.addEventListener("resize", function(){
+  if(window.innerWidth >= 1024){
+    menu.classList.add("max-h-0","opacity-0");
+    menu.classList.remove("max-h-96","opacity-100");
+    menuBtn.setAttribute("aria-expanded","false");
+    menuIcon.classList.replace("fa-xmark","fa-bars");
+  }
 });
 
-function closeMenu() {
-    menu.classList.add("translate-x-full");
-    overlay.classList.add("hidden");
-}
+const themeButtons=[document.getElementById("theme-toggle"), document.getElementById("theme-toggle-mobile")].filter(Boolean);
 
-document.getElementById("close-menu").addEventListener("click", closeMenu);
-overlay.addEventListener("click", closeMenu);
+function applyTheme(isDark){
+  document.body.classList.toggle("dark", isDark);
 
-// ===========================
-// Dark Mode
-// ===========================
-
-const desktopThemeBtn = document.getElementById("desktop-theme-toggle");
-const mobileThemeBtn = document.getElementById("mobile-theme-toggle");
-
-const desktopThemeIcon = document.getElementById("desktop-theme-icon");
-const mobileThemeIcon = document.getElementById("mobile-theme-icon");
-
-// Restore saved theme
-if (localStorage.getItem("theme") === "dark") {
-    document.documentElement.classList.add("dark");
-    document.body.classList.add("bg-[#4B2046]", "text-white");
-    desktopThemeIcon.className = "fa-solid fa-sun text-yellow-400";
-    mobileThemeIcon.className = "fa-solid fa-sun text-yellow-400";
-}
-
-function toggleTheme() {
-
-    document.documentElement.classList.toggle("dark");
-
-    const isDark = document.documentElement.classList.contains("dark");
-
-    if (isDark) {
-
-        document.body.classList.remove("bg-white");
-        document.body.classList.add("bg-[#4B2046]", "text-white");
-
-        desktopThemeIcon.className = "fa-solid fa-sun text-yellow-400";
-        mobileThemeIcon.className = "fa-solid fa-sun text-yellow-400";
-
-        localStorage.setItem("theme", "dark");
-
-    } else {
-
-        document.body.classList.remove("bg-[#4B2046]", "text-white");
-        document.body.classList.add("bg-white");
-
-        desktopThemeIcon.className = "fa-solid fa-moon text-pink-500";
-        mobileThemeIcon.className = "fa-solid fa-moon text-pink-500";
-
-        localStorage.setItem("theme", "light");
+  themeButtons.forEach(function(button){
+    const icon=button.querySelector("i");
+    if(icon){
+      icon.className=isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
     }
+  });
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 
-desktopThemeBtn.addEventListener("click", toggleTheme);
-mobileThemeBtn.addEventListener("click", toggleTheme);
+const savedTheme=localStorage.getItem("theme");
+applyTheme(savedTheme === "dark");
 
-// ===========================
-// RTL / LTR
-// ===========================
+themeButtons.forEach(function(button){
+  button.onclick=function(){
+    applyTheme(!document.body.classList.contains("dark"));
+  };
+});
 
-// Restore saved direction
-if (localStorage.getItem("dir") === "rtl") {
-    document.documentElement.setAttribute("dir", "rtl");
-}
+// RTL
 
-function toggleRTL() {
+document.getElementById("rtl-toggle").onclick=function(){
+  document.body.classList.toggle("rtl-mode");
+};
 
-    const currentDir = document.documentElement.getAttribute("dir");
-
-    if (currentDir === "rtl") {
-        document.documentElement.setAttribute("dir", "ltr");
-        localStorage.setItem("dir", "ltr");
-    } else {
-        document.documentElement.setAttribute("dir", "rtl");
-        localStorage.setItem("dir", "rtl");
-    }
-
-}
-
-document.getElementById("desktop-rtl-toggle").addEventListener("click", toggleRTL);
-document.getElementById("mobile-rtl-toggle").addEventListener("click", toggleRTL);
+document.getElementById("rtl-toggle-mobile").onclick=function(){
+  document.body.classList.toggle("rtl-mode");
+};
 
 </script>
+
+
+
+
 
 
 
@@ -309,39 +301,30 @@ document.getElementById("mobile-rtl-toggle").addEventListener("click", toggleRTL
 <!-- ================= HERO ================= -->
 
 <section
-class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center justify-between min-h-screen gap-10">
+class="bg-rose-50 px-[8%] py-10 md:py-14 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
 
     <!-- Left -->
-
     <div class="w-full md:w-1/2">
 
         <h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-6">
-
             Celebrate Every Moment with the Perfect Gift
-
         </h1>
 
         <p class="text-gray-600 text-lg leading-8 mb-8">
-
             Discover thoughtful gifts, personalized surprises,
             and beautiful greeting cards for every special occasion.
-
         </p>
 
         <div class="flex flex-wrap gap-5">
 
             <a href="#"
                 class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-bold transition">
-
                 Shop Now
-
             </a>
 
             <a href="#"
                 class="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white px-8 py-4 rounded-full font-bold transition">
-
                 Explore Collection
-
             </a>
 
         </div>
@@ -349,21 +332,17 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
     </div>
 
     <!-- Right -->
-
     <div class="w-full md:w-1/2 flex justify-center">
 
         <img src="image/pixel2.jpg"
             alt="Gift"
-            class="w-full max-w-2xl rounded-xl">
+            class="w-full max-w-xl lg:max-w-2xl rounded-2xl shadow-xl">
 
     </div>
 
-</section> <!-- ================= SHOP BY OCCASION ================= -->
+</section>
 
-
-
-
-
+<!-- ================= SHOP BY OCCASION ================= -->
 
 <section class="py-20 px-[8%] bg-rose-50 text-center">
 
@@ -460,7 +439,6 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
     </div>
 
 </section>
-
 
 
 
@@ -971,41 +949,43 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
 
 <!-- ================= LAST MINUTE PICKUP ================= -->
 
-<section class="py-20 px-[8%] bg-rose-50">
+<section class="py-20 px-[8%] bg-rose-50 dark:bg-[#3b1835] transition-colors duration-300">
 
     <div class="text-center mb-12">
 
-        <h2 class="text-4xl font-bold text-gray-800">
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-white">
             Last Minute Pickup
         </h2>
 
-        <p class="text-gray-600 mt-3 text-lg">
+        <p class="text-gray-600 dark:text-gray-300 mt-3 text-lg">
             Order online and collect your gift from our store in just 30 minutes.
         </p>
 
     </div>
 
-    <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl p-10">
+    <div class="max-w-5xl mx-auto bg-white dark:bg-[#4b2044] rounded-3xl shadow-xl p-10 transition-colors duration-300">
 
         <div class="grid md:grid-cols-2 gap-10">
 
             <!-- Store Details -->
-
             <div class="space-y-6">
 
                 <div class="flex items-center gap-4">
+
                     <div class="bg-pink-500 text-white p-4 rounded-full">
                         <i class="fa-solid fa-location-dot text-xl"></i>
                     </div>
 
                     <div>
-                        <h3 class="font-bold text-xl text-gray-800">
+
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-white">
                             Store Address
                         </h3>
 
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 dark:text-gray-300">
                             45 Gift Street, Chennai, Tamil Nadu
                         </p>
+
                     </div>
 
                 </div>
@@ -1018,11 +998,11 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
 
                     <div>
 
-                        <h3 class="font-bold text-xl text-gray-800">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-white">
                             Open Today
                         </h3>
 
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 dark:text-gray-300">
                             9:00 AM – 9:00 PM
                         </p>
 
@@ -1038,11 +1018,11 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
 
                     <div>
 
-                        <h3 class="font-bold text-xl text-gray-800">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-white">
                             Contact Number
                         </h3>
 
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 dark:text-gray-300">
                             +91 98765 43210
                         </p>
 
@@ -1058,11 +1038,11 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
 
                     <div>
 
-                        <h3 class="font-bold text-xl text-gray-800">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-white">
                             Parking Available
                         </h3>
 
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 dark:text-gray-300">
                             Free Parking for Customers
                         </p>
 
@@ -1073,24 +1053,21 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
             </div>
 
             <!-- Right Side -->
-
-            <div class="flex flex-col justify-center items-center bg-pink-50 rounded-2xl p-8">
+            <div class="flex flex-col justify-center items-center bg-pink-50 dark:bg-[#5a2b52] rounded-2xl p-8 transition-colors duration-300">
 
                 <i class="fa-solid fa-bag-shopping text-6xl text-pink-500 mb-6"></i>
 
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">
                     Pickup in 30 Minutes
                 </h2>
 
-                <p class="text-gray-600 text-center mb-8">
+                <p class="text-gray-600 dark:text-gray-300 text-center mb-8">
                     Place your order online and pick it up from our store in just 30 minutes.
                 </p>
 
                 <a href="#"
                     class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-bold transition">
-
                     Get Directions
-
                 </a>
 
             </div>
@@ -1100,8 +1077,6 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
     </div>
 
 </section>
-
-
 
 
 
@@ -1237,100 +1212,131 @@ class="bg-rose-50 px-[8%] py-16 flex flex-col-reverse md:flex-row items-center j
 
 <!-- ================= CLEAN PREMIUM FOOTER ================= -->
 
-<footer class="bg-white border-t border-gray-200 pt-20 px-[8%]">
+<!-- ================= PREMIUM FOOTER ================= -->
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 pb-12">
+<footer class="bg-white border-t border-gray-200 w-full">
 
-        <!-- Brand -->
-        <div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
 
-            <h2 class="text-3xl font-bold text-gray-800">
-                Gift<span class="text-pink-500">Nest</span> 🎁
-            </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
 
-            <p class="text-gray-600 mt-4 leading-7">
-                Personalized gifts crafted with love to make every moment unforgettable.
-            </p>
+            <!-- Brand -->
+            <div>
 
-            <!-- Social Icons -->
-            <div class="flex gap-4 mt-6">
+                <h2 class="text-3xl font-bold text-pink-500 flex items-center gap">
+                    Gift<span class="text-pink-500">Nest</span>
+                    <i class="fa-solid fa-gift text-pink-500"></i>
+                </h2>
 
-                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
+                <p class="text-gray-600 mt-5 leading-8">
+                    Personalized gifts crafted with love to make every celebration memorable and special.
+                </p>
 
-                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+                <div class="flex gap-4 mt-8">
 
-                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
+                    <a href="#" class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
 
-                <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
+                    <a href="#" class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" class="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center hover:bg-pink-500 hover:text-white transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-6">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-4 text-gray-600">
+
+                    <li><a href="index.html" class="hover:text-pink-500 transition">Home</a></li>
+                    <li><a href="admin.html" class="hover:text-pink-500 transition">Admin</a></li>
+                    <li><a href="shop.html" class="hover:text-pink-500 transition">Shop</a></li>
+                    <li><a href="categories.html" class="hover:text-pink-500 transition">Categories</a></li>
+                    <li><a href="deals.html" class="hover:text-pink-500 transition">Deals</a></li>
+                    <li><a href="about.html" class="hover:text-pink-500 transition">About</a></li>
+                    <li><a href="contact.html" class="hover:text-pink-500 transition">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Support -->
+            <div>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-6">
+                    Support
+                </h3>
+
+                <ul class="space-y-4 text-gray-600">
+
+                    <li><a href="#" class="hover:text-pink-500 transition">FAQ</a></li>
+                    <li><a href="#" class="hover:text-pink-500 transition">Shipping</a></li>
+                    <li><a href="#" class="hover:text-pink-500 transition">Returns</a></li>
+                    <li><a href="#" class="hover:text-pink-500 transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-pink-500 transition">Terms & Conditions</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-6">
+                    Contact Us
+                </h3>
+
+                <div class="space-y-5 text-gray-600">
+
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-pink-500"></i>
+                        Tamil Nadu, India
+                    </p>
+
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-pink-500"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-pink-500"></i>
+                        support@giftnest.com
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
-        <!-- Links -->
-        <div>
+        <!-- Bottom -->
+        <div class="border-t border-gray-200 mt-14 pt-6 text-center text-gray-500">
 
-            <h3 class="text-lg font-bold text-gray-800 mb-5">Quick Links</h3>
-
-            <ul class="space-y-3 text-gray-600">
-
-                <li><a href="#" class="hover:text-pink-500">Home</a></li>
-                <li><a href="#" class="hover:text-pink-500">Admin</a></li>
-                <li><a href="#" class="hover:text-pink-500">Shop</a></li>
-                <li><a href="#" class="hover:text-pink-500">Categories</a></li>
-                <li><a href="#" class="hover:text-pink-500">Deals</a></li>
-                <li><a href="#" class="hover:text-pink-500">Contact</a></li>
-
-            </ul>
+            © 2026 GiftNest |
+            Designed with
+            <i class="fa-solid fa-heart text-pink-500"></i>
+            for gifting happiness.
 
         </div>
-
-        <!-- Support -->
-        <div>
-
-            <h3 class="text-lg font-bold text-gray-800 mb-5">Support</h3>
-
-            <ul class="space-y-3 text-gray-600">
-
-                <li><a href="#" class="hover:text-pink-500">FAQ</a></li>
-                <li><a href="#" class="hover:text-pink-500">Shipping</a></li>
-                <li><a href="#" class="hover:text-pink-500">Returns</a></li>
-                <li><a href="#" class="hover:text-pink-500">Privacy Policy</a></li>
-
-            </ul>
-
-        </div>
-
-        <!-- Contact -->
-        <div>
-
-            <h3 class="text-lg font-bold text-gray-800 mb-5">Contact</h3>
-
-            <p class="text-gray-600">📍 Tamil Nadu, India</p>
-            <p class="text-gray-600 mt-2">📞 +91 98765 43210</p>
-            <p class="text-gray-600 mt-2">✉ support@giftnest.com</p>
-
-        </div>
-
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="border-t border-gray-200 py-6 mt-10 text-center text-gray-500 text-sm">
-
-        © 2026 GiftNest | Designed with ❤️ for gifting happiness
 
     </div>
 
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
